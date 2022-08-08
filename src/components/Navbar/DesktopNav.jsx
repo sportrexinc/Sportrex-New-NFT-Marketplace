@@ -1,0 +1,51 @@
+import React from "react";
+import logo from "../../assets/logo.svg";
+import { navData } from "../../constants/Navbar";
+import { Link } from "react-router-dom";
+import Language from "../Language/Language";
+import ActionBtn from "../Button/ActionBtn";
+
+const styles = {
+  active: "text-white light text-[18px] border-b-[1px] border-white",
+  inactive: "text-white text-[18px] text-grey light",
+  listItem: "flex items-center justify-center",
+};
+const DesktopNav = () => {
+  let current = 1;
+  return (
+    <div className="hidden md:flex w-full bg-blue-card h-[82px]  px-16  items-center element-index"
+    >
+      <div className="w-full flex justify-between items-center 2xl:container 2xl:mx-auto ">
+        <div className="w-4/12 h-auto">
+          <img src={logo} alt="logo" className="w-32" />
+        </div>
+        <div className="right w-8/12 flex ">
+          <ul className="w-full flex items-center justify-around">
+            {navData.map((item, index) => {
+              return (
+                <li key={index} className={styles.listItem}>
+                  <Link
+                    to={item.linkTo}
+                    className={
+                      current === item.id ? styles.active : styles.inactive
+                    }
+                  >
+                    {item.text}
+                  </Link>
+                </li>
+              );
+            })}
+            <li className={styles.listItem}>
+              <Language />
+            </li>
+            <li className={styles.listItem}>
+              <ActionBtn action={() => {}} name="Connect Wallet" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DesktopNav;
