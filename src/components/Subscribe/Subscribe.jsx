@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import { useTranslation } from "react-i18next";
 import sendicon from '../../assets/sendicon.png';
 import axios from 'axios';
-
+import NormalLayout from '../../layouts/NormalLayout';
 import ColouredHeaderText from '../common/ColouredHeaderText';
 
 const url = 'https://sportrex-be.herokuapp.com/api/subscribe';
@@ -48,7 +48,8 @@ const Subscribe = () => {
   };
   return (
     <>
-      <section className={styles.container}>
+      <NormalLayout>
+     
         <div className={styles.contentContainer}>
           <div className="w-full md:w-5/12 ">
             <div className={styles.title}>
@@ -81,7 +82,8 @@ const Subscribe = () => {
             </form>
           </div>
         </div>
-      </section>
+     
+      </NormalLayout>
     </>
   );
 };

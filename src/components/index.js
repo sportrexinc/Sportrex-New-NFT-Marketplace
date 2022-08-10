@@ -9,6 +9,7 @@ import TopCollections from "./TopCollections";
 import MarketCategory from "./MarketCategory";
 import MainHero from "./Hero/MainHero";
 import MobileNavbar from "./Navbar/MobileNav";
-export { DesktopNav, Language, ActionBtn, LinkBtn, Footer, Subscribe, BlockhainList, TopCollections, MarketCategory, MainHero, MobileNavbar };
+import How from "./HowPlatformWorks/How";
+export { DesktopNav, Language, ActionBtn, LinkBtn, Footer, Subscribe, BlockhainList, TopCollections, MarketCategory, MainHero, MobileNavbar, How };
 
 

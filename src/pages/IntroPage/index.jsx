@@ -33,10 +33,13 @@ const Loading = () => {
   return (
     <div className="loading-bg">
       <div className="  w-full h-screen flex justify-center flex-col items-center ">
-        <div className="w-full h-36 ">
+        <div className="w-full h-44 ">
           <div className="bg-blue w-full flex justify-center items-center mb-12 sm:mb-24">
             <img src={logo} alt="sportrex_logo" width={326} height={54} />
           </div>
+          <h1 className="text-center text-white text-2xl bold ">
+            {lengthArray[index]}
+          </h1>
           <div
             className="bg-blue-btn h-[8px] w-full rounded-md transition-all duration-150 ease-linear"
             style={{

@@ -7,8 +7,10 @@ import {
   TopCollections,
   BlockhainList,
   MainHero,
-  MobileNavbar
+  MobileNavbar,
+  How
 } from '../../components';
+import Testing from '../../components/MarketCategory/Testing';
 import Community from '../../components/Community/Cummunity';
 import PlatformWork from '../../components/HowPlatformWorks/PlatformWork';
 import Blog from '../../components/LatestBlog/Blog';
@@ -26,7 +28,8 @@ const index = () => {
         <BlockhainList />
       </Divider>
       <Divider>
-        <PlatformWork />
+        {/* <PlatformWork /> */}
+        <How />
       </Divider>
       <Divider />
       <TrendingNFT />
@@ -39,7 +42,8 @@ const index = () => {
       <NewNft />
       <Divider />
       <div>
-        <MarketCategory />
+        {/* <MarketCategory /> */}
+        <Testing />
       </div>
       <Divider size="150px" />
 

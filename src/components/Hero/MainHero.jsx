@@ -29,8 +29,8 @@ const MainHero = () => {
                   <p>VR & AR Powered Marketplace</p>
                 </div>
               </div>
-              <div className="w-full md:w-8/12 mt-5">
-                <div className="flex text-[24px] md:text-[40px] flex-wrap leading-7 md:leading-[51px] bold font-bold">
+              <div className="w-full md:w-11/12 mt-5">
+                <div className="flex text-[24px] md:text-[42px] flex-wrap leading-7 md:leading-[51px] bold font-bold">
                   <span className="grad-text mr-2">Mint,</span>
                   <span className="grad-text mr-2">Buy,</span>
                   <span className="text-white mr-2">and</span>
@@ -39,12 +39,12 @@ const MainHero = () => {
                   <span className="text-white mr-2">with Ease</span>
                 </div>
                 <div className="text-white mt-4 ">
-                  <p className="text-[16px] md:text-2xl leading-[25px] md:leading-9 regular">
+                  <p className="text-[16px] md:text-2xl leading-[25px] md:leading-9 regular w-9/12">
                     Stake and earn yield on the most liquid decentralized NFT
                     marketplace, and navigate your NFTs in VR/AR Mode
                   </p>
                 </div>
-                <div className="flex mt-4 space-x-8">
+                <div className="flex mt-8 space-x-8">
                   <LinkBtn path="/market" name="Explore Market" />
                   <YellowBtn path='/mint' name="Mint" />
                 </div>

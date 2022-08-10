@@ -39,7 +39,7 @@ const Community = () => {
           Join a fast-growing community of NFTs holders connected all over the
           multiverse, building the new era of the metaverse via play-to earn.
         </p>
-        <div className="flex space-x-[40px]">
+        <div className="flex space-x-[40px] mt-4">
           {links.map((link, index) => (
             <a
               target="_blank"
@@ -64,7 +64,7 @@ const Community = () => {
           ))}
         </div>
         <div>
-          <button className="flex justify-center items-center border-[2px] border-[#FAC744] text-[#FAC744] px-[64px] py-[18px]">
+          <button className="flex justify-center items-center border-[2px] border-[#FAC744] text-[#FAC744] px-[64px] py-[18px] mt-10">
             <p>Explore</p>
           </button>
         </div>

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const NftCard = ({ isTrending }) => {
   return (
-    <div className="w-full h-full bg-no-repeat bg-cover bg-blue-header rounded-[10px] md:rounded-[20px] p-2 md:p-4 flex flex-col items-start space-y-[12px] justify-between">
+    <div className="w-full min-w-[300px] md:h-[296px] md:w-[304px] h-full bg-no-repeat bg-cover bg-blue-header rounded-[10px] md:rounded-[20px] p-2 md:p-4 flex flex-col items-start space-y-[12px] justify-between">
       <img
         className={`w-full ${
-          isTrending ? 'h-[135px] md:h-[180px]' : 'h-[120px]'
+          isTrending ? 'h-[135px] md:h-[180px]' : 'h-[120px] w-[270px] md:h-[180px]'
         }`}
         src={`/assets/images/carousel/masked.png`}
         alt=""

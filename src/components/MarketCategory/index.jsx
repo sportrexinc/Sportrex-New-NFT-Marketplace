@@ -2,14 +2,17 @@ import React from 'react'
 import cat from '../../assets/backgrounds/cat-desk.png'
 import category from '../../assets/category.png'
 import mob from '../../assets/backgrounds/cat-mob.png'
+import NormalLayout from '../../layouts/NormalLayout'
 const items = ["1", "1", "1", "1", "1", "1", "1", "1",];
 const index = () => {
-    return (
+  return (
+      <NormalLayout>
       <div>
     <div className="relative w-full h-auto hidden md:block">
       <div className="w-full h-auto  ">
         <img src={cat} alt="ere" className="w-full h-auto" />
-      </div>
+          </div>
+            
       <div className="absolute top-0 left-0  ">
               <div className="flex flex-col  py-10 px-10 2xl:px-24 2xl:py-16 ">
                   <div className="div">
@@ -57,7 +60,8 @@ const index = () => {
       </div>
             </div>
           
-    </div>
+      </div>
+      </NormalLayout>
   );
 }
 

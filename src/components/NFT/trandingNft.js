@@ -1,19 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NftCard from '../Carousel/NftCard';
+import NormalLayout from '../../layouts/NormalLayout';
+import {IoIosArrowForward} from 'react-icons/io';
 
 const TrendingNFT = () => {
   return (
-    <div className="w-full px-4 md:px-[64px] ">
-      <h1 className="text-[22px] leading-[28px] font-[700]  md:text-center text-start mb-[32px] md:mb-[64px] grad-text">
-        Trending NFTs
-      </h1>
-      <div className="w-full min-h-[296px] h-full grid grid-cols-2 md:grid-cols-3 gap-[16px] md:gap-[32px]">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
-          <NftCard isTrending />
-        ))}
+    <NormalLayout>
+      <div className="trending-bg lg: p-8 md:p-20">
+        <div className="w-full  ">
+          <div className="w-full flex justify-between items-center mb-[32px] md:mb-[51px]">
+            <h1 className="text-3xl leading-[28px] font-[700] bold   text-start  text-white">
+              Trending NFTs
+            </h1>
+            <Link
+              to="/nft"
+              className="text-white flex space-x-3 text-lg semibold items-center "
+            >
+              <span className="text-lg">View More</span>
+              <IoIosArrowForward className="text-lg" />
+            </Link>
+          </div>
+          <div className="w-full min-h-[296px] h-full grid grid-cols-2 md:grid-cols-4 gap-[16px] md:gap-[32px]">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+              <NftCard isTrending />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </NormalLayout>
   );
 };
 

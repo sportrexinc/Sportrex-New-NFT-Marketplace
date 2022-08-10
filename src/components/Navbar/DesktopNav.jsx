@@ -1,19 +1,28 @@
-import React from "react";
+import React,{useState} from "react";
 import logo from "../../assets/logo.svg";
 import { navData } from "../../constants/Navbar";
 import { Link } from "react-router-dom";
 import Language from "../Language/Language";
 import ActionBtn from "../Button/ActionBtn";
-
+import ConnectModal from "../modals/WalletConnectModal";
 const styles = {
   active: "text-white light text-[18px] border-b-[1px] border-white",
   inactive: "text-white text-[18px] text-grey light",
   listItem: "flex items-center justify-center",
 };
 const DesktopNav = () => {
+  const [open,setOpen] = useState(false)
   let current = 1;
+  
+  const handleOpen = () => {
+    setOpen(true)
+  }
+  const handleClose = () => {
+    setOpen(false)
+  }
+
   return (
-    <div className="hidden md:flex w-full bg-blue-card h-[82px]  px-16  items-center element-index"
+    <div className="hidden md:flex w-full bg-blue-card h-[82px] z-100 z-[9999] px-16  items-center sticky top-0 "
     >
       <div className="w-full flex justify-between items-center 2xl:container 2xl:mx-auto ">
         <div className="w-4/12 h-auto">
@@ -39,10 +48,11 @@ const DesktopNav = () => {
               <Language />
             </li>
             <li className={styles.listItem}>
-              <ActionBtn action={() => {}} name="Connect Wallet" />
+              <ActionBtn action={handleOpen} name="Connect Wallet" />
             </li>
           </ul>
         </div>
+        <ConnectModal open={open} handleClose={handleClose} />
       </div>
     </div>
   );

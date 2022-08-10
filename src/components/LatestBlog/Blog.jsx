@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import NormalLayout from '../../layouts/NormalLayout';
 const Blog = () => {
   const posts = [0, 1, 2];
   return (
+    <NormalLayout>
     <div className="px-4 md:px-[60px] w-full space-y-[32px] md:space-y-[64px]">
-      <h1 className="grad-text text-[22px] leading-[28px]  md:text-[30px] text-center mx-auto">
+      <h1 className="grad-text text-[22px] leading-[40px]  md:text-[30px] text-center mx-auto">
         Our Latest Blog Posts
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-[35px]">
@@ -36,12 +37,13 @@ const Blog = () => {
               lorem.
             </p>
             <div>
-              <Link className="text-[#FAC744] leading-[22px]">Read more</Link>
+              <Link className="text-[#FAC744] bold leading-[22px]">Read more</Link>
             </div>
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    </NormalLayout>
   );
 };
 

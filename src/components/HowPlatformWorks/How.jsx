@@ -1,0 +1,78 @@
+import React from 'react'
+import NormalLayout from '../../layouts/NormalLayout'
+import animator from '../../assets/animator.png'
+import LinkBtn from '../Button/LinkBtn';
+const options = [
+  {
+    title: "NFT Purchase",
+    description:
+      "Choose from different varieties of minted NFT assets from our NFT market place.",
+    image: animator,
+    imageAlt: "animator",
+    name: "Go to market",
+        id: 1,
+        path: "/market"
+    
+  },
+  {
+    title: "NFT Creation",
+    description:
+      "Enjoy seamleess NFT creation and minting on Sportrex marketplace with low gas fee.",
+    image: animator,
+    imageAlt: "animator",
+    name: "Mint NFT",
+    id: 2,
+  },
+  {
+    title: "NFT Staking",
+    description:
+      "Select your preffered pool for NFT staking and earn yield return on all your staked NFT assets.",
+    image: animator,
+    imageAlt: "animator",
+    name: "Go to vault",
+    id: 3,
+  },
+];
+
+
+const How = () => {
+    return (
+      <NormalLayout>
+        <div className="flex  flex-col w-full">
+          <div className="header">
+            <div className="w-full flex justify-center ">
+                        <h1 className="text-center grad-text text-3xl bold">
+                            How The Platform Works
+              </h1>
+                    </div>
+                    <div className="mt-[90px]  w-full flex justify-between items-center overflow-x-hidden">
+                        {options.map((option, index) => (
+                      <div className="how-card shape-ex">
+                            <div className="shape-in">
+                                <div className="internal">
+                                        <div className="w-full flex py-8 px-4 flex-col ">
+                                            <div className="img-container">
+                                                <img src={option.image} alt={option.imageAlt} className="w-[80px]h-auto " />
+                                            </div>
+                                            <div className="mt-4">
+                                                <h2 className=" text-white text-2xl font-bold bold">{option.title}</h2>
+                                                <p className="text-white text-lg leading-8">{option.description}</p>
+                                            </div>
+                                            <div className="btn-container w-7/12 mt-4">
+                                                <LinkBtn name={option.name} path={option.path} />
+                                            </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        ))}
+                    
+                    
+                    </div>
+          </div>
+        </div>
+      </NormalLayout>
+    );
+}
+
+export default How
