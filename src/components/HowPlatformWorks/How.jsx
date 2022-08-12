@@ -22,6 +22,7 @@ const options = [
     imageAlt: "animator",
     name: "Mint NFT",
     id: 2,
+    path:"/select-nft"
   },
   {
     title: "NFT Staking",
@@ -31,6 +32,7 @@ const options = [
     imageAlt: "animator",
     name: "Go to vault",
     id: 3,
+    path:"/vault"
   },
 ];
 

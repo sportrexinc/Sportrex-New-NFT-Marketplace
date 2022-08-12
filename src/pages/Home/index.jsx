@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {
   DesktopNav,
   Footer,
@@ -8,15 +8,19 @@ import {
   BlockhainList,
   MainHero,
   MobileNavbar,
-  How
+  How,
+  NewCarousel,
 } from '../../components';
-import Testing from '../../components/MarketCategory/Testing';
+import Testing from '../../components/MarketCategory/MarketCategory';
 import Community from '../../components/Community/Cummunity';
 import PlatformWork from '../../components/HowPlatformWorks/PlatformWork';
 import Blog from '../../components/LatestBlog/Blog';
 import NewNft from '../../components/NFT/newNft';
 import TrendingNFT from '../../components/NFT/trandingNft';
-const index = () => {
+const Home = () => {
+   useEffect(() => {
+     window.scrollTo(0, 0);
+   }, []);
   return (
     <div className="w-full min-h-screen h-full bg-blue-body text-white">
       <DesktopNav />
@@ -27,6 +31,7 @@ const index = () => {
       <Divider size={78}>
         <BlockhainList />
       </Divider>
+      {/* <NewCarousel /> */}
       <Divider>
         {/* <PlatformWork /> */}
         <How />
@@ -69,4 +74,4 @@ const Divider = ({ size, children }) => {
   );
 };
 
-export default index;
+export default Home;
