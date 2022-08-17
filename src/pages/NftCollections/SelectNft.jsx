@@ -21,7 +21,7 @@ const SelectNft = () => {
         {/* #$$$$$$$$$$$$$$$$$$$$$$$ */}
         <div className="mt-16 mb-20 w-full lg:w-10/12 grid gap-x-8 grid-cols-2 xl:grid-cols-3">
           <div
-            className="flex justify-center  items-center bold text-white xl:text-3xl  xl:h-[225px] bg-blue-header rounded-[25px] cursor-pointer hover:bg-blue-btn"
+            className="flex justify-center  items-center bold text-white xl:text-3xl  xl:h-[225px] bg-blue-header  cursor-pointer hover:bg-blue-btn box-bordery"
             onClick={() => history.push("/single-nft")}
           >
             <p>Single NFT</p>

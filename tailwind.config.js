@@ -29,6 +29,7 @@ module.exports = {
         500: "#4C4C4C",
         700: "#6A6B6D",
         800: "#ABABAB",
+        900: "#2E405D",
       },
       cancel: "#C25E5E",
     },

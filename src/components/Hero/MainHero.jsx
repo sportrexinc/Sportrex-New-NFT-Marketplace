@@ -29,7 +29,7 @@ const MainHero = () => {
                   <p>VR & AR Powered Marketplace</p>
                 </div>
               </div>
-              <div className="w-full md:w-11/12 mt-5">
+              <div className="w-full md:w-9/12 mt-5">
                 <div className="flex text-[24px] md:text-[42px] flex-wrap leading-7 md:leading-[51px] bold font-bold">
                   <span className="grad-text mr-2">Mint,</span>
                   <span className="grad-text mr-2">Buy,</span>

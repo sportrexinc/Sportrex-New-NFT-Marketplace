@@ -18,10 +18,16 @@ import TextAreaInput from "./Inputs/TextAreaInput";
 import SelectInput from "./Inputs/SelectInput";
 import YellowActionBtn from "./Button/YellowActionBtn";
 import Header from "./Text/Header";
+import ConnectedNav from "./Navbar/ConnectedNav";
+import CustomSelect from "./Select/CustomSelect";
+import OverviewCard from "./StakingComponents/OverviewCard";
+import UnlockCard from "./StakingComponents/UnlockCard";
+import LockedCard from "./StakingComponents/LockedCard";
+import UnlockSelect from "./Select/UnlockSelect";
 
 export {
     DesktopNav, Language, ActionBtn, LinkBtn, Footer, Subscribe, BlockhainList, TopCollections, MarketCategory, MainHero, MobileNavbar, How, NewCarousel, FaqDropdown,
-    FileInput, TextInput, TextAreaInput, SelectInput, YellowActionBtn,Header
+    FileInput, TextInput, TextAreaInput, SelectInput, YellowActionBtn,Header, ConnectedNav, CustomSelect, OverviewCard, UnlockCard, UnlockSelect, LockedCard
 };
 
 

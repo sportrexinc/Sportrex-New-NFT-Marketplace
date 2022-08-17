@@ -2,6 +2,7 @@ import React from 'react'
 import NormalLayout from '../../layouts/NormalLayout'
 import animator from '../../assets/animator.png'
 import LinkBtn from '../Button/LinkBtn';
+import "./How.css"
 const options = [
   {
     title: "NFT Purchase",
@@ -47,20 +48,20 @@ const How = () => {
                             How The Platform Works
               </h1>
                     </div>
-                    <div className="mt-[90px]  w-full flex justify-between items-center overflow-x-hidden">
+                    <div className="mt-[90px]  w-full flex space-x-8 justify-between items-center flow-hide-x lg:overflow-x-hidden overflow-y-hidden h-full">
                         {options.map((option, index) => (
                       <div className="how-card shape-ex">
                             <div className="shape-in">
                                 <div className="internal">
-                                        <div className="w-full flex py-8 px-4 flex-col ">
+                                        <div className="w-full flex py-4 lg:py-8 px-4 flex-col flow-hide ">
                                             <div className="img-container">
-                                                <img src={option.image} alt={option.imageAlt} className="w-[80px]h-auto " />
+                                                <img src={option.image} alt={option.imageAlt} className=" w-[30px] lg:w-[80px] h-auto " />
                                             </div>
-                                            <div className="mt-4">
-                                                <h2 className=" text-white text-2xl font-bold bold">{option.title}</h2>
-                                                <p className="text-white text-lg leading-8">{option.description}</p>
+                                            <div className="mt-2">
+                                                <h2 className=" text-white text-base lg:text-2xl font-bold bold">{option.title}</h2>
+                                                <p className="text-white text-sm lg:text-lg leading-4 lg:leading-8">{option.description}</p>
                                             </div>
-                                            <div className="btn-container w-7/12 mt-4">
+                                            <div className=" w-full lg:w-7/12 mt-2 lg:mt-4">
                                                 <LinkBtn name={option.name} path={option.path} />
                                             </div>
                                 </div>

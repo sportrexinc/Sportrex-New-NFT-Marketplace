@@ -15,14 +15,14 @@ export const navData = [
     id: 3,
     text: "Create",
 
-    linkTo: "/demo3",
+    linkTo: "/select-nft",
   },
  
   {
     id: 4,
     text: "Staking" ,
 
-    linkTo: "/stake",
+    linkTo: "/staking",
   },
   {
     id: 5,
