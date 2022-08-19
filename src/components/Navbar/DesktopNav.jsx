@@ -22,7 +22,7 @@ const DesktopNav = () => {
   }
 
   return (
-    <div className="hidden md:flex w-full bg-blue-card h-[82px] z-100 z-[9999] px-16  items-center sticky top-0 "
+    <div className="hidden md:flex w-full bg-blue-card h-[82px] z-10 px-16  items-center sticky top-0 "
     >
       <div className="w-full flex justify-between items-center 2xl:container 2xl:mx-auto ">
         <div className="w-4/12 h-auto">

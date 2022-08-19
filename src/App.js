@@ -12,6 +12,7 @@ import EditNft from './pages/NftCollections/EditNft';
 import Staking from './pages/Staking';
 import LockedStake from './pages/Staking/LockedStake';
 import UnlockedStake from './pages/Staking/UnlockedStake';
+import NotConnectedStake from './pages/Staking/NotConnectedStake';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route path="/staking" component={Staking} />
       <Route path="/locked-stake" component={LockedStake} />
       <Route path="/unlocked-stake" component={UnlockedStake} />
+      <Route path="/not-connected-stake" component={NotConnectedStake} />
     </Switch>
   );
 }

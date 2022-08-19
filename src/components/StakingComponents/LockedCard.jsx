@@ -1,8 +1,18 @@
-import React from "react";
+import React,{useState} from "react";
 import heart from "../../assets/heart.svg";
 import UnlockSelect from "../Select/UnlockSelect";
 import ActionBtn from "../Button/ActionBtn";
+import UnStakeNftModal from "../modals/UnstakeNftModal";
 const LockedCard = () => {
+   const [open, setOpen] = useState(false);
+   let current = 1;
+
+   const handleOpen = () => {
+     setOpen(true);
+   };
+   const handleClose = () => {
+     setOpen(false);
+   };
   return (
     <div className="w-full h-auto rounded-[20px] bg-blue-card flex flex-col p-4 ">
       <div className="img-container relative h-auto w-full ">
@@ -30,9 +40,10 @@ const LockedCard = () => {
           <p className="text-yellow text-md semibold ">123 Days Left</p>
         </div>
         <div className="pt-4">
-          <ActionBtn name="Un-Stake NFT" />
+          <ActionBtn name="Un-Stake NFT" action={handleOpen} />
         </div>
       </div>
+      <UnStakeNftModal open={open} handleClose={handleClose} />
     </div>
   );
 };

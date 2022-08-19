@@ -1,9 +1,18 @@
 import React from 'react'
 import ParentLayout from '../../layouts/ParentLayout'
 import { Header, CustomSelect, OverviewCard } from '../../components'
-import {BsArrowRight,BsArrowLeft} from 'react-icons/bs'
+import { BsArrowRight, BsArrowLeft } from 'react-icons/bs'
+import {useHistory} from 'react-router-dom'
 const items = [1, 2, 3, 4, 5, 6, 7, 8];
 const Staking = () => {
+  const history = useHistory();
+  const back = () => {
+    history.goBack();
+  }
+  const next = () => {
+    history.push('/unlocked-stake')
+  }
+
   return (
     <ParentLayout current={4}>
       <div className="flex-col w-full">
@@ -25,10 +34,14 @@ const Staking = () => {
 
         </div>
         <div className="mt-32 w-full justify-center space-x-12 flex">
-          <button className="bg-grey-800 rounded-full text-black cursor-pointer  text-lg  p-4">
+          <button className="bg-grey-800 rounded-full text-black cursor-pointer  text-lg  p-4"
+          onClick={back}
+          >
             <BsArrowLeft />
           </button>
-          <button className="bg-yellow text-lg rounded-full text-black p-4">
+          <button className="bg-yellow text-lg rounded-full text-black p-4"
+          onClick={next}
+          >
             <BsArrowRight />
           </button>
         </div>

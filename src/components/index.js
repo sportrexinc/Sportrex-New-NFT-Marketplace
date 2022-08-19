@@ -24,10 +24,13 @@ import OverviewCard from "./StakingComponents/OverviewCard";
 import UnlockCard from "./StakingComponents/UnlockCard";
 import LockedCard from "./StakingComponents/LockedCard";
 import UnlockSelect from "./Select/UnlockSelect";
+import ConnectModal from "./modals/WalletConnectModal";
+import UnstakeNftModal from "./modals/UnstakeNftModal";
+import StakeNftModal from "./modals/StakeNftModal";
 
 export {
     DesktopNav, Language, ActionBtn, LinkBtn, Footer, Subscribe, BlockhainList, TopCollections, MarketCategory, MainHero, MobileNavbar, How, NewCarousel, FaqDropdown,
-    FileInput, TextInput, TextAreaInput, SelectInput, YellowActionBtn,Header, ConnectedNav, CustomSelect, OverviewCard, UnlockCard, UnlockSelect, LockedCard
+    FileInput, TextInput, TextAreaInput, SelectInput, YellowActionBtn,Header, ConnectedNav, CustomSelect, OverviewCard, UnlockCard, UnlockSelect, LockedCard, ConnectModal, StakeNftModal, UnstakeNftModal
 };
 
 

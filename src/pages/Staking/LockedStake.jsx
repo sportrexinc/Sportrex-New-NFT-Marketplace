@@ -3,10 +3,17 @@ import ParentLayout from "../../layouts/ParentLayout";
 import { Header, CustomSelect, LockedCard } from "../../components";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { sampData } from "./sampData";
-
+import {useHistory} from 'react-router-dom'
 
 const data = [1, 2, 3, 4];
 const LockedStake = () => {
+  const history = useHistory();
+  const back = () => {
+    history.goBack();
+  }
+  const next = () => {
+    history.push('/not-connected-stake')
+  }
   return (
     <ParentLayout current={4}>
       <div className="flex-col w-full">
@@ -38,10 +45,14 @@ const LockedStake = () => {
           ))}
         </div>
         <div className="mt-32 w-full justify-center space-x-12 flex">
-          <button className="bg-grey-800 rounded-full text-black cursor-pointer  text-lg  p-4">
+          <button className="bg-grey-800 rounded-full text-black cursor-pointer  text-lg  p-4"
+          onClick={back}
+          >
             <BsArrowLeft />
           </button>
-          <button className="bg-yellow text-lg rounded-full text-black p-4">
+          <button className="bg-yellow text-lg rounded-full text-black p-4"
+          onClick={next}
+          >
             <BsArrowRight />
           </button>
         </div>
