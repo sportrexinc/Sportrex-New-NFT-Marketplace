@@ -9,10 +9,10 @@ const Carousel = () => {
   useEffect(() => {});
   return (
     <C infiniteLoop showThumbs={false} showStatus={false}>
-      {[0, 1, 2].map(() => (
-        <div className="w-full h-full flex space-x-[32px]">
-          {(isMobile ? [0, 1] : [0, 1, 2, 3]).map(() => (
-            <NftCard />
+      {[0, 1, 2].map((index) => (
+        <div className="w-full h-full flex space-x-[32px]" key={index} >
+          {(isMobile ? [0, 1] : [0, 1, 2, 3]).map((i, index) => (
+            <NftCard key={index} />
           ))}
         </div>
       ))}

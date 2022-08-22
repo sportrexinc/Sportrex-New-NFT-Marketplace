@@ -11,7 +11,7 @@ import cancel from "../../assets/cancel.svg";
 import Language from "../Language/Language";
 
 const styles = {
-  parentContainer: "w-full overflow-x-hidden m-sticky-nav md:hidden", 
+  parentContainer: "w-full overflow-x-hidden m-sticky-nav lg:hidden", 
   container:
     "w-11/12 mx-auto flex flex-col justify-between items-center biome-regular relative overflow-x-hidden",
   logoContainer: "w-full flex justify-between items-center min-h-[36px]  pt-4",

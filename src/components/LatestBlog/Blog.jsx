@@ -17,6 +17,7 @@ const Blog = () => {
               background:
                 'linear-gradient(140deg, transparent 30px, #0e1648 0)',
             }}
+            key={index}
           >
             {/* <img
               className="w-full h-full"

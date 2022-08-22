@@ -2,6 +2,7 @@ import React from 'react'
 import NormalLayout from '../../layouts/NormalLayout'
 import animator from '../../assets/animator.png'
 import LinkBtn from '../Button/LinkBtn';
+import MobileHow from './MobileHow';
 import "./How.css"
 const options = [
   {
@@ -48,9 +49,9 @@ const How = () => {
                             How The Platform Works
               </h1>
                     </div>
-                    <div className="mt-[90px]  w-full flex space-x-8 justify-between items-center flow-hide-x lg:overflow-x-hidden overflow-y-hidden h-full">
+                    <div className="mt-[90px] hidden lg:flex w-full  space-x-8 justify-between items-center flow-hide-x lg:overflow-x-hidden overflow-y-hidden h-full">
                         {options.map((option, index) => (
-                      <div className="how-card shape-ex">
+                      <div className="how-card shape-ex" key={index}>
                             <div className="shape-in">
                                 <div className="internal">
                                         <div className="w-full flex py-4 lg:py-8 px-4 flex-col flow-hide ">
@@ -71,7 +72,10 @@ const How = () => {
                         ))}
                     
                     
-                    </div>
+            </div>
+            <div className="mt-[90px]">
+              <MobileHow />
+            </div>
           </div>
         </div>
       </NormalLayout>

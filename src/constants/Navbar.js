@@ -3,7 +3,7 @@ export const navData = [
     id: 1,
     text: "Home",
 
-    linkTo: "/",
+    linkTo: "/home",
   },
   {
     id: 2,

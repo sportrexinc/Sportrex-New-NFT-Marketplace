@@ -47,6 +47,7 @@ const Community = () => {
               rel="noreferrer"
               href={link.link}
               className={index % 2 !== 0 || index === 0 ? 'mt-4' : ''}
+              key={index}
             >
               <div
                 className="relative w-[50px] h-[100px] bg-no-repeat bg-cover "

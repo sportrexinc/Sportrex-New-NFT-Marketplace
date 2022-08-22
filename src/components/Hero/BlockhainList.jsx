@@ -11,7 +11,7 @@ const item = [image1, image2, image3, image4, image5, image6, image7,image3];
 const BlockhainList = () => {
     return (
       <div className="w-full ">
-        <div className=" w-full px-16 hidden md:flex">
+        <div className=" w-full px-16 hidden lg:flex">
           <div className="w-full flex justify-between items-center 2xl:container 2xl:mx-auto ">
             <div className="img-div">
               <img src={image1} alt="logo" className="w-auto" />
@@ -36,7 +36,7 @@ const BlockhainList = () => {
             </div>
           </div>
         </div>
-        <div className="py-8 md:hidden ">
+        <div className="py-8 lg:hidden ">
           <Marquee gradientWidth="0" speed="50" pauseOnHover="true">
             <div className="flex justify-between w-full  items-center ">
               {item.map((item, index) => {
