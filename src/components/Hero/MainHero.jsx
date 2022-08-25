@@ -29,7 +29,7 @@ const MainHero = () => {
                   <p>VR & AR Powered Marketplace</p>
                 </div>
               </div>
-              <div className="w-full sm:w-7/12 lg:w-9/12 mt-5">
+              <div className="w-full sm:w-8/12 lg:w-9/12 mt-5">
                 <div className="flex text-[24px] sm:text-3xl lg:text-[42px] flex-wrap leading-7 sm:leading-[40px] lg:leading-[51px] bold font-bold">
                   <span className="grad-text mr-2">Mint,</span>
                   <span className="grad-text mr-2">Buy,</span>
@@ -39,7 +39,7 @@ const MainHero = () => {
                   <span className="text-white mr-2">with Ease</span>
                 </div>
                 <div className="text-white mt-4 ">
-                  <p className="text-[16px] sm:text-xl lg:text-2xl leading-[25px] lg:leading-9 regular w-9/12">
+                  <p className="text-[16px] sm:text-xl lg:text-2xl leading-[25px] lg:leading-9 regular sm:w-10/12 w-9/12">
                     Stake and earn yield on the most liquid decentralized NFT
                     marketplace, and navigate your NFTs in VR/AR Mode
                   </p>

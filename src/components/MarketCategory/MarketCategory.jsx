@@ -10,7 +10,7 @@ const Testing = () => {
       <div>
         <div className="relative w-full h-auto hidden md:block">
           <div className="w-full h-auto  ">
-            <img src={cat} alt="ere" className="w-full h-auto" />
+            <img src={cat} alt="ere" className="w-full lg:h-auto sm:h-[300px]" />
           </div>
 
           <div className="absolute top-0 left-0  ">

@@ -11,7 +11,7 @@ const styles = {
   container:
     'flex md:flex w-full h-full justify-center px-4 sm:px-8 max-w-[1440px] mx-auto',
   contentContainer:
-    'md:mx-auto  w-full flex flex-col md:flex-row items-center py-16 md:justify-between space-y-4 md:space-y-0',
+    'md:mx-auto  w-full flex flex-col lg:flex-row items-center py-16 md:justify-between space-y-4 sm:space-y-10 lg:space-y-0',
   inputContainer:
     'w-full max-w-[597px] bg-white flex justify-between rounded-[2.5rem] px-6 py-4',
   input: 'border-none outline-none w-10/12 text-grey-dark text-lg regular',
@@ -51,15 +51,15 @@ const Subscribe = () => {
       <NormalLayout>
      
         <div className={styles.contentContainer}>
-          <div className="w-full md:w-5/12 ">
+          <div className="w-full sm:w-9/12 lg:w-5/12 ">
             <div className={styles.title}>
               {/* <ColouredHeaderText text="Be Part Of Greatness, Join the Sportex community " size="30px" /> */}
-              <h1 className="grad-text text-22px  md:text-[30px] text-center md:text-start">
+              <h1 className="grad-text text-22px  md:text-[30px] text-center lg:text-start">
                 Be Part Of Greatness, Join the Sportex community
               </h1>
             </div>
           </div>
-          <div className="w-full md:w-7/12 flex justify-center ">
+          <div className="w-full sm:w-9/12  lg:w-7/12 flex justify-center ">
             <form className={styles.inputContainer} onSubmit={handleSubmit}>
               <input
                 className={styles.input}

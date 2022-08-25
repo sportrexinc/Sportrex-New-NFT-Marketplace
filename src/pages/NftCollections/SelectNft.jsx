@@ -19,21 +19,21 @@ const SelectNft = () => {
           </p>
         </div>
         {/* #$$$$$$$$$$$$$$$$$$$$$$$ */}
-        <div className="mt-16 mb-20 w-full lg:w-10/12 grid gap-x-8 grid-cols-2 xl:grid-cols-3">
+        <div className="mt-16 mb-20 w-full lg:w-10/12 grid sm:gap-x-8 gap-y-8 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
           <div
-            className="flex justify-center  items-center bold text-white xl:text-3xl  xl:h-[225px] bg-blue-header  cursor-pointer hover:bg-blue-btn box-bordery"
+            className="flex justify-center  items-center bold text-white xl:text-3xl h-[150px]  xl:h-[225px] bg-blue-header rounded-[25px]  cursor-pointer  box-bordery"
             onClick={() => history.push("/single-nft")}
           >
             <p>Single NFT</p>
           </div>
           <div
-            className="flex justify-center  items-center bold text-white xl:text-3xl  xl:h-[225px] bg-blue-header rounded-[25px] cursor-pointer hover:bg-blue-btn"
+            className="flex justify-center  items-center bold text-white xl:text-3xl h-[150px] xl:h-[225px] bg-blue-header rounded-[25px] cursor-pointer box-bordery "
             onClick={() => history.push("/bundle-nft")}
           >
             <p>Bundle NFT</p>
           </div>
           <div
-            className="flex justify-center  items-center bold text-white xl:text-3xl  xl:h-[225px] bg-blue-header rounded-[25px] cursor-pointer hover:bg-blue-btn"
+            className="flex justify-center  items-center bold text-white xl:text-3xl h-[150px] xl:h-[225px] bg-blue-header rounded-[25px] cursor-pointer box-bordery "
             onClick={() => history.push("/collection-nft")}
           >
             <p>Collection NFT</p>

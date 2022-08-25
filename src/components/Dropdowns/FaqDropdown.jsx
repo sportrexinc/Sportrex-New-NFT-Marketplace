@@ -9,7 +9,7 @@ const FaqDropdown = ({ text, title }) => {
   return (
     <div className="flex flex-col  rounded-lg  ">
       <div className="bg-blue-dropHeader flex justify-between px-6 py-6 rounded-t-lg  text-white">
-        <p className="text-xl semibold">{title}</p>
+        <p className=" text-md  lg:text-xl semibold">{title}</p>
         {open ? (
           <IoIosArrowUp
             className="text-3xl cursor-pointer"

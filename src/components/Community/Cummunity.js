@@ -31,11 +31,11 @@ const Community = () => {
   ];
   return (
     <div className="w-full mx-auto">
-      <div className="w-full md:w-2/3 mx-auto flex flex-col items-center text-center space-y-[30px] px-4">
+      <div className="w-full sm:w-10/12 lg:w-2/3 mx-auto flex flex-col items-center text-center space-y-[30px] px-4">
         <h1 className="grad-text text-[22px]  md:text-[30px] leading-[28px] text-center md:text-start">
           Community
         </h1>
-        <p className="text-white text-[20px] leading-[25px] w-full md:w-2/3">
+        <p className="text-white text-[20px] leading-[25px] w-full sm:w-10/12 lg:w-2/3">
           Join a fast-growing community of NFTs holders connected all over the
           multiverse, building the new era of the metaverse via play-to earn.
         </p>

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/spt-logo.svg";
 import { navData } from "../../constants/Navbar";
 import { Link } from "react-router-dom";
 import Language from "../Language/Language";
-import ActionBtn from "../Button/ActionBtn";
 import ConnectModal from "../modals/WalletConnectModal";
 import { FaUserCircle, FaBell } from "react-icons/fa";
 const styles = {
@@ -15,9 +14,6 @@ const ConnectedNav = ({current}) => {
   const [open, setOpen] = useState(false);
 
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
   const handleClose = () => {
     setOpen(false);
   };

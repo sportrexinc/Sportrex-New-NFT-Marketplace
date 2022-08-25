@@ -60,7 +60,7 @@ const Home = () => {
       {/* <NewNftBg /> */}
       <Divider size="150px" />
       <Subscribe />
-      <Divider size="150px" />
+      <Divider size="100px" />
 
       <Footer />
     </div>

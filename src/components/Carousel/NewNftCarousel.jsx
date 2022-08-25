@@ -5,7 +5,7 @@ import NftCard from './NftCard';
 
 const Carousel = () => {
   const { width, height } = useResizer();
-  const isMobile = width < 768;
+  const isMobile = width < 820;
   useEffect(() => {});
   return (
     <C infiniteLoop showThumbs={false} showStatus={false}>

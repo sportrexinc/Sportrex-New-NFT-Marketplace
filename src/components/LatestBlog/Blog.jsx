@@ -9,7 +9,7 @@ const Blog = () => {
       <h1 className="grad-text text-[22px] leading-[40px]  md:text-[30px] text-center mx-auto">
         Our Latest Blog Posts
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-[35px]">
+      <div className="grid grid-cols-1 sm:place-items-center sm:grid-cols-1 lg:grid-cols-3 gap-[35px]">
         {posts.map((post, index) => (
           <div
             className="flex flex-col space-y-4 bg-no-repeat bg-cover py-[16px] px-[16px] text-white rounded-md"

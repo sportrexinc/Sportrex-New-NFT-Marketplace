@@ -270,10 +270,11 @@ z-index: 7;
 
 /* ################################### END OF TRENDING NFT SIDE */
   
-.box-bordery {
+.box-bordery:hover {
   /* border-radius: 25px; */
-  border: 2px solid;
+  border: 4px solid;
   border-image-slice: 1;
+  border-radius: 25px;
   border-image-source: linear-gradient(to left, #fac744, #8b14ef, #3333ff);
 }
 
