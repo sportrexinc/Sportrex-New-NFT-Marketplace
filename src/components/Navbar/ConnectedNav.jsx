@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/spt-logo.svg";
 import { navData } from "../../constants/Navbar";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import Language from "../Language/Language";
 import ConnectModal from "../modals/WalletConnectModal";
 import { FaUserCircle, FaBell } from "react-icons/fa";
@@ -10,7 +10,11 @@ const styles = {
   inactive: "text-white text-[18px] text-grey light",
   listItem: "flex items-center justify-center",
 };
-const ConnectedNav = ({current}) => {
+const ConnectedNav = ({ current }) => {
+  const history = useHistory();
+  const gotoProfile = () => {
+    history.push("/profile")
+  }
   const [open, setOpen] = useState(false);
 
 
@@ -46,7 +50,7 @@ const ConnectedNav = ({current}) => {
             <li className={styles.listItem}>
                           {/* <ActionBtn action={handleOpen} name="Connect Wallet" /> */}
                           <div className="flex items-center">
-                              <FaUserCircle className="text-blue-btn text-2xl mr-6" />
+                              <FaUserCircle className="text-blue-btn text-2xl mr-6 cursor-pointer" onClick={gotoProfile}  />
                                 <FaBell className="text-blue-btn text-2xl" />
                           </div>
             </li>

@@ -1,7 +1,8 @@
-import { style } from "@mui/system";
+import { useState } from 'react'
 import React from "react";
 import thumbnail from "../../assets/profile/thumbnail.jpg";
-
+import { FiSettings } from 'react-icons/fi'
+import {AiFillCamera} from 'react-icons/ai'
 import "./profile.css";
 
 const styles = {
@@ -19,6 +20,14 @@ const styles = {
 };
 
 const ProfileHero = () => {
+
+  const [activeTab, setActiveTab] = useState("nft");
+
+
+
+
+
+
   let img =
     "https://res.cloudinary.com/www-daniekeys-com/image/upload/v1614139130/cupcake5_wgeqy0.jpg";
   return (
@@ -38,6 +47,10 @@ const ProfileHero = () => {
           zIndex: 0,
         }}
       >
+        <div className="flex space-x-4 absolute right-8 bottom-4">
+          <FiSettings className="text-white text-3xl" />
+          <AiFillCamera className="text-white text-3xl" />
+        </div>
         <div className={styles.imgContainer}>
           <img
             src={img}
@@ -50,20 +63,20 @@ const ProfileHero = () => {
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.content}>
-        <div className={styles.nameContainer}>
-          <p className="text-xl regular text-white ">Username</p>
-          <p className="text-2xl  text-yellow semibold ">Daniekeys</p>
-        </div>
-        <div className="mt-6 regular text-white text-lg text-center">
-          <p>3tekf3b31hjdqr7i3h2e8hjv</p>
-        </div>
-        <div className="text-lg mt-4 ">
-          <p className="text-center regular text-lg leading-8">
-            Lorem ipsum, lorem ispu m lorem ipsum lorem ipsumLorem ipsum, lorem
-            ispu m lorem ipsum lorem ipsumorem ispu m lorem ipsum lorem
-            ipsumLorem ipsum, lorem ispu m lorem ipsum lorem ipsum
-          </p>
-        </div>
+          <div className={styles.nameContainer}>
+            <p className="text-xl regular text-white ">Username</p>
+            <p className="text-2xl  text-yellow semibold ">Daniekeys</p>
+          </div>
+          <div className="mt-6 regular text-white text-lg text-center">
+            <p>3tekf3b31hjdqr7i3h2e8hjv</p>
+          </div>
+          <div className="text-lg mt-4 ">
+            <p className="text-center regular text-lg leading-8">
+              Lorem ipsum, lorem ispu m lorem ipsum lorem ipsumLorem ipsum,
+              lorem ispu m lorem ipsum lorem ipsumorem ispu m lorem ipsum lorem
+              ipsumLorem ipsum, lorem ispu m lorem ipsum lorem ipsum
+            </p>
+          </div>
         </div>
       </div>
     </div>

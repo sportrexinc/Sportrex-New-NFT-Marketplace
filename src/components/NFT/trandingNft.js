@@ -17,7 +17,7 @@ const TrendingNFT = () => {
           </div>
           <div className="w-full md:min-h-[296px] h-full grid grid-cols-2 lg:grid-cols-4 gap-[16px]   lg:gap-[32px]">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <NftCard isTrending />
+              <NftCard  />
             ))}
           </div>
           <div className="w-full flex justify-center items-center mt-8">

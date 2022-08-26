@@ -27,10 +27,16 @@ import UnlockSelect from "./Select/UnlockSelect";
 import ConnectModal from "./modals/WalletConnectModal";
 import UnstakeNftModal from "./modals/UnstakeNftModal";
 import StakeNftModal from "./modals/StakeNftModal";
-
+import ProfileTab from "./Profile/ProfileTab";
+import ProfileHero from "./Profile/ProfileHero";
+import MyNfts from "./Profile/MyNfts";
+import MyOffer from "./Profile/MyOffer";
+import MyActivities from "./Profile/MyActivities";
+import Favourite from './Profile/Favourite'
+import Collections from './Profile/Collections'
 export {
     DesktopNav, Language, ActionBtn, LinkBtn, Footer, Subscribe, BlockhainList, TopCollections, MarketCategory, MainHero, MobileNavbar, How, NewCarousel, FaqDropdown,
-    FileInput, TextInput, TextAreaInput, SelectInput, YellowActionBtn,Header, ConnectedNav, CustomSelect, OverviewCard, UnlockCard, UnlockSelect, LockedCard, ConnectModal, StakeNftModal, UnstakeNftModal
+    FileInput, TextInput, TextAreaInput, SelectInput, YellowActionBtn,Header, ConnectedNav, CustomSelect, OverviewCard, UnlockCard, UnlockSelect, LockedCard, ConnectModal, StakeNftModal, UnstakeNftModal, ProfileTab, ProfileHero, MyActivities,MyOffer,Collections,Favourite,MyNfts
 };
 
 

@@ -14,6 +14,7 @@ import LockedStake from './pages/Staking/LockedStake';
 import UnlockedStake from './pages/Staking/UnlockedStake';
 import NotConnectedStake from './pages/Staking/NotConnectedStake';
 import Testing from './pages/Testing/Testing';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
       <Route path="/unlocked-stake" component={UnlockedStake} />
       <Route path="/not-connected-stake" component={NotConnectedStake} />
       <Route path="/testing" component={Testing} />
+      <Route path="/profile" component={Profile} />
+      
     </Switch>
   );
 }
