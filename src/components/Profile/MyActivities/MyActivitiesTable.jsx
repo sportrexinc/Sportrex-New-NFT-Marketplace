@@ -1,41 +1,40 @@
-import React from 'react'
+import React from "react";
 
-const MyOfferTable = () => {
+const MyActivitiesTable = () => {
   return (
     <div>
       <div className="h-auto flow-hide">
-        <table className="table-auto min-w-[400px] flow-hide-x md:w-full ">
+        <table className="table-auto min-w-[400px] w-full flow-hide-x md:w-full ">
           <thead>
             <tr className="w-full grid grid-cols-5 reglar text-lg text-grey-800 py-2 regular">
-              <th className="text-md md:text-lg   ">Price</th>
-              <th className="text-md md:text-lg  ">USD Price</th>
-              <th className="text-md  md:text-lg  ">Floor difference</th>
-              <th className="text-md md:text-lg   ">Expiration</th>
-              <th className="text-md  md:text-lg    ">From</th>
+              <th className="text-md md:text-lg ">Events</th>
+              <th className="text-md md:text-lg">Price</th>
+              <th className="text-md  md:text-lg ">From</th>
+              <th className="text-md md:text-lg ">To</th>
+              <th className="text-md  md:text-lg ">Transaction date</th>
             </tr>
           </thead>
           <tbody>
-            {[1,2,3,4,5,6,7,8]?.map((item, index) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8]?.map((item, index) => (
               <tr
                 className=" w-full grid grid-cols-5 md:grid-cols-5 py-2 "
                 key={index}
               >
                 <td className="flex justify-center items-center text-md text-white  md:text-xl">
-                  50 SPT
+                  Offer
                 </td>
                 <td className="flex justify-center      items-center text-md text-white  md:text-xl">
-                  $40,000
+                  5 SPT
                 </td>
                 <td className="flex justify-center   items-center text-md text-white  md:text-xl">
-                  30%
+                  5453443
                 </td>
                 <td className="flex justify-center items-center text-md text-white  md:text-xl">
-                  2/03/2022
+                  2324353
                 </td>
                 <td className="flex justify-center itrmd-center md:justify-center   items-center text-md text-white  md:text-xl">
-                  5474548
+                  3 Hours ago
                 </td>
-     
               </tr>
             ))}
           </tbody>
@@ -43,6 +42,6 @@ const MyOfferTable = () => {
       </div>
     </div>
   );
-}
+};
 
-export default MyOfferTable
+export default MyActivitiesTable;

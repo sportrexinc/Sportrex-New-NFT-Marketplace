@@ -1,9 +1,9 @@
 import React from "react";
-
+import MyActivitiesTable from "./MyActivitiesTable";
 const MyActivities = () => {
   return (
     <div className="bg-blue-body w-full h-full">
-      <p className="text-white">MyActivities</p>
+      <MyActivitiesTable />
     </div>
   );
 };
