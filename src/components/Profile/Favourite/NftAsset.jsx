@@ -1,16 +1,16 @@
 import React from "react";
-import ListedCard from "./ListedCard";
+import NftAssetCard from "./NftAssetCard";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
-const Listed = () => {
+const Owned = () => {
   let data = [1, 2, 3, 4, 5, 6, 7, 8];
-     const back = () => {};
-     const next = () => {};
+  const back = () => {};
+  const next = () => {};
   return (
     <div>
       <div className="w-full md:min-h-[296px] h-full grid grid-cols-2 lg:grid-cols-4 gap-[16px]   lg:gap-[32px]">
         {[1, 2, 3, 4, 5, 6, 7, 8].map((i, index) => (
-          <ListedCard key={index} />
+          <NftAssetCard key={index} />
         ))}
       </div>
       <div className="mt-32 w-full justify-center space-x-12 flex">
@@ -31,4 +31,4 @@ const Listed = () => {
   );
 };
 
-export default Listed;
+export default Owned;

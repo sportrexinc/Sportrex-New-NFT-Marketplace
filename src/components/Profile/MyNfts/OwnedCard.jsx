@@ -1,11 +1,26 @@
 import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import heart from "../../../assets/heart.svg"
-import {AiOutlineHeart,AiFillHeart} from "react-icons/ai"
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai"
+import {BsThreeDotsVertical} from "react-icons/bs"
 const OwnedCard = ({ isTrending }) => {
-    const [liked, setLiked] = useState(false);
+  const [liked, setLiked] = useState(false);
+  const [openOptions, setOpenOptions] = useState(false);
   return (
-    <div className="w-full  lg:min-w-[300px] md:h-[296px] sm:w-[280px] lg:w-[304px] h-full bg-no-repeat bg-cover bg-blue-header rounded-[10px] md:rounded-[20px] p-2 md:p-4 flex flex-col items-start space-y-[12px] justify-between">
+    <div className="w-full  lg:min-w-[300px] md:h-[296px] sm:w-[280px] lg:w-[304px] h-full bg-no-repeat bg-cover bg-blue-header rounded-[10px] md:rounded-[20px] p-2 md:p-4 flex flex-col items-start space-y-[12px] justify-between relative">
+      <div className="absolute flex flex-col top-9 right-4 w-48 pr-4 ">
+        <BsThreeDotsVertical className="text-white text-2xl self-end" onClick={() => setOpenOptions(!openOptions)} />
+        {openOptions &&
+          <div className="mt-2 w-40 bg-blue-body rounded-[15px] flex flex-col space-y-1 p-4">
+            <p className="w-full hover:bg-blue-btn text-white text-lg regular">
+              Edit
+            </p>
+            <p className="w-full text-lg  hover:bg-blue-btn text-white regular">
+              mint
+            </p>
+          </div>
+        }
+      </div>
       <img
         className={`w-full ${
           isTrending
@@ -17,7 +32,7 @@ const OwnedCard = ({ isTrending }) => {
       />
       <p className="text-[18px] leading-[30px]">Heartcrib</p>
       <div className="flex justify-between w-full">
-        <Link className="text-[#FAC744] leading-[22px]">0.3 SPT</Link>
+        <Link className="text-[#FAC744] semibold leading-[22px]">0.3 SPT</Link>
         <div className="flex space-x-1 items-center">
           {liked ? (
             <AiFillHeart
