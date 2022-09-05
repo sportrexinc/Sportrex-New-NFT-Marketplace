@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProfileSelect from "../../Select/ProfileSelect";
+import Collections from "./Collections";
 import NftAsset from "./NftAsset";
 
 const Favourite = () => {
@@ -7,9 +8,14 @@ const Favourite = () => {
   const [active, setActive] = useState(1);
   const data = [
     {
+      value: "Collections",
+      label: "Collections",
+      id: 1,
+    },
+    {
       value: "NftAsset by me",
       label: "NftAsset by me",
-      id: 1,
+      id: 2,
     },
 
   ];
@@ -22,11 +28,12 @@ const Favourite = () => {
           setActive={setActive}
           active={active}
           data={data}
-          name="NftAsset by me"
+          name="Collections"
         />
       </div>
       <div className="mt-6">
-        {active === 1 && <NftAsset />}
+        {active === 1 && <Collections /> }
+        {active === 2 && <NftAsset />}
       
       </div>
     </div>
