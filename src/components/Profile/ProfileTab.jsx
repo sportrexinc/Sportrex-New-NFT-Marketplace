@@ -1,5 +1,6 @@
 import { style } from '@mui/system/Stack/createStack';
 import React from 'react'
+import NormalLayout from '../../layouts/NormalLayout';
 const styles = {
     container:"w-auto flex space-y-1 flex-col",
     active:"text-white regular text border-b-[3px] text-xl semibold border-[#fff] cursor-pointer py-2",
@@ -30,7 +31,10 @@ const tabs = [
 ];
 const ProfileTab = ({activeTab,setActiveTab}) => {
   return (
-    <div className='flex justify-between h-16 px-10  items-center bg-blue-dropHeader'>
+    <div className='w-full bg-blue-dropHeader'>
+      <NormalLayout>
+    <div className='flex justify-between h-16   items-center bg-blue-dropHeader'>
+
       {
         tabs.map((item, index) => {
           return (
@@ -42,7 +46,9 @@ const ProfileTab = ({activeTab,setActiveTab}) => {
             </p>
           )
         })
-       }
+          }
+          </div>
+        </NormalLayout>
     </div>
   )
 }

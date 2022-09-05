@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/spt-logo.svg";
+
 
 import telegram from "../../assets/icons/telegram.png";
 import twitter from "../../assets/icons/twitter.png";
