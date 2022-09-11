@@ -34,9 +34,10 @@ import MyOffer from "./Profile/MyOffer";
 import MyActivities from "./Profile/MyActivities";
 import Favourite from './Profile/Favourite'
 import Collections from './Profile/Collections'
+import GeneralAccordion from "./Accordion/GeneralAccordion";
 export {
     DesktopNav, Language, ActionBtn, LinkBtn, Footer, Subscribe, BlockhainList, TopCollections, MarketCategory, MainHero, MobileNavbar, How, NewCarousel, FaqDropdown,
-    FileInput, TextInput, TextAreaInput, SelectInput, YellowActionBtn,Header, ConnectedNav, CustomSelect, OverviewCard, UnlockCard, UnlockSelect, LockedCard, ConnectModal, StakeNftModal, UnstakeNftModal, ProfileTab, ProfileHero, MyActivities,MyOffer,Collections,Favourite,MyNfts
+    FileInput, TextInput, TextAreaInput, SelectInput, YellowActionBtn,Header, ConnectedNav, CustomSelect, OverviewCard, UnlockCard, UnlockSelect, LockedCard, ConnectModal, StakeNftModal, UnstakeNftModal, ProfileTab, ProfileHero, MyActivities,MyOffer,Collections,Favourite,MyNfts,GeneralAccordion
 };
 
 

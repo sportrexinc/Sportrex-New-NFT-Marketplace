@@ -15,6 +15,8 @@ import UnlockedStake from './pages/Staking/UnlockedStake';
 import NotConnectedStake from './pages/Staking/NotConnectedStake';
 import Testing from './pages/Testing/Testing';
 import Profile from './pages/Profile';
+import MintNft from './pages/Profile/MintNft';
+import EditCreatorProfile from './pages/Profile/EditCreatorProfile';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
       <Route path="/not-connected-stake" component={NotConnectedStake} />
       <Route path="/testing" component={Testing} />
       <Route path="/profile" component={Profile} />
+      <Route path="/mint-nft" component={MintNft} />
+       <Route path="/edit-creator-profile" component={EditCreatorProfile} />   
       
     </Switch>
   );
