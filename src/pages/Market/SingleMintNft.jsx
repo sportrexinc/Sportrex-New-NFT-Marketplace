@@ -3,8 +3,12 @@ import ParentLayout from "../../layouts/ParentLayout";
 import { useHistory } from "react-router-dom";
 import dummy from "../../assets/general/edit-dummy.png";
 import nodata from "../../assets/general/nodata.svg";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+
 import { YellowActionBtn, ActionBtn, GeneralAccordion } from "../../components";
-const MintNft = () => {
+const SingleMintNft = () => {
+  const [liked, setLiked] = useState(false);
+
   const history = useHistory();
   const handleMintModal = () => {
     console.log("hey");
@@ -22,26 +26,46 @@ const MintNft = () => {
 
   return (
     <div>
-      <ParentLayout>
+      <ParentLayout current={2}>
         <div className="w-full flex flex-col my-4">
           {/* Header */}
           <div className="flex flex-col md:flex-row md:space-x-8 ">
             <div className="w-full md:w-6/12  lg:w-4/12">
               <img src={dummy} alt="use" className="w-full h-auto" />
             </div>
-            <div className="w-full md:w-6/12  lg:w-7/12 flex items-center">
-              <div className="flex flex-col  w-full">
-                <p className="bold text-yellow text-lg">Painter</p>
-                <p className="mt-2 text-white semibold text-lg">
-                  Painter #23535
-                </p>
+            <div className="w-full md:w-6/12  lg:w-7/12 flex items-start">
+              <div className="flex flex-col  w-full ">
+                <div className="flex justify-between">
+                  <p className="mt-2 text-white semibold text-lg">
+                    Painter #23535
+                  </p>
+                  <div className="flex space-x-1 items-center">
+                    {liked ? (
+                      <AiFillHeart
+                        className="text-xl text-yellow"
+                        onClick={() => setLiked(false)}
+                      />
+                    ) : (
+                      <AiOutlineHeart
+                        className="text-xl text-grey-800"
+                        onClick={() => setLiked(true)}
+                      />
+                    )}
+                    <p className="regular text-grey-800">23</p>
+                  </div>
+                </div>
                 <div className="flex space-x-1 mt-2">
                   <p className="text-grey-800 text-base regular">Owned by</p>
                   <p className="text-yellow opacity-80 text-base regular">
                     Daniekeys
                   </p>
                 </div>
-                <div className="mt-20 flex space-x-8 items-center w-full">
+                <p className="text-md text-grey-800 regular  mt-2">
+                  2000 items sold
+                </p>
+                <p className="mt-6 text-grey-800 regular text-md">Price</p>
+                <p className="mt-2 grad-text text-lg bold">0.5343 SPT</p>
+                <div className="mt-10 flex space-x-8 items-center w-full">
                   <div className="w-3/12">
                     <ActionBtn name="Mint" action={handleMintModal} />
                   </div>
@@ -49,6 +73,12 @@ const MintNft = () => {
                   <div className=" w-3/12">
                     <YellowActionBtn name="Edit" action={Edit} />
                   </div>
+                </div>
+                <p className="mt-2 regular text-base text-grey-800">Sale ends April 12, 2022 at 6:50pm WAT</p>
+                <div className="mt-6 flex flex-col ">
+                  <p className="text-white regular">
+                    share on social media
+                </p>
                 </div>
               </div>
             </div>
@@ -207,4 +237,4 @@ const MintNft = () => {
   );
 };
 
-export default MintNft;
+export default SingleMintNft;

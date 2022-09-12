@@ -17,6 +17,7 @@ import Testing from './pages/Testing/Testing';
 import Profile from './pages/Profile';
 import MintNft from './pages/Profile/MintNft';
 import EditCreatorProfile from './pages/Profile/EditCreatorProfile';
+import SingleMintNft from './pages/Market/SingleMintNft';
 
 function App() {
   return (
@@ -37,8 +38,8 @@ function App() {
       <Route path="/testing" component={Testing} />
       <Route path="/profile" component={Profile} />
       <Route path="/mint-nft" component={MintNft} />
-       <Route path="/edit-creator-profile" component={EditCreatorProfile} />   
-      
+      <Route path="/edit-creator-profile" component={EditCreatorProfile} />
+      <Route path="/mint-single-nft" component={SingleMintNft} />
     </Switch>
   );
 }

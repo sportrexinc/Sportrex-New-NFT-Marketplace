@@ -2,7 +2,7 @@ import React,{useEffect} from 'react';
 import {
   DesktopNav,
   Footer,
-  MarketCategory,
+  
   Subscribe,
   TopCollections,
   BlockhainList,
@@ -11,7 +11,7 @@ import {
   How,
   NewCarousel,
 } from '../../components';
-import Testing from '../../components/MarketCategory/MarketCategory';
+import MarketCategory from '../../components/MarketCategory/MarketCategory';
 import Community from '../../components/Community/Cummunity';
 import PlatformWork from '../../components/HowPlatformWorks/PlatformWork';
 import Blog from '../../components/LatestBlog/Blog';
@@ -48,7 +48,7 @@ const Home = () => {
       <Divider />
       <div>
         {/* <MarketCategory /> */}
-        <Testing />
+        <MarketCategory />
       </div>
       <Divider size="150px" />
 
