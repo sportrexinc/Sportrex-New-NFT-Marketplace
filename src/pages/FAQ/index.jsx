@@ -43,7 +43,7 @@ const linksArrayA = [
 
 const index = () => {
   return (
-    <ParentLayout>
+    <ParentLayout current={5}>
       <div className="w-full flex flex-col">
         <div className=" md:mt-[80px] flex flex-col items-center space-y-4">
           <h1 className="text-center grad-text bold text-xl md:text-3xl">

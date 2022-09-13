@@ -28,6 +28,6 @@ export const navData = [
     id: 5,
     text: "Resources",
 
-    linkTo: "/resources",
+    linkTo: "/faq",
   },
 ];

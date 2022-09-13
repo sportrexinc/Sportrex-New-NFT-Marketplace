@@ -5,14 +5,23 @@ import dummy from "../../assets/general/edit-dummy.png";
 import nodata from "../../assets/general/nodata.svg";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { linksArrayA } from "../../constants/IconsData";
-
-import { YellowActionBtn, ActionBtn, GeneralAccordion,Tables,MarketList } from "../../components";
+import one from "../../assets/market/one.png"
+import two from "../../assets/market/two.png"
+import three from "../../assets/market/three.png"
+import four from "../../assets/market/four.png"
+import {
+  YellowActionBtn,
+  ActionBtn,
+  GeneralAccordion,
+  Tables,
+  MarketList,
+} from "../../components";
 
 const styles = {
   icon: "w-[32px] sm:w-[40px] h-auto  ",
 };
 
-const SingleMintNft = () => {
+const CollectionMintNft = () => {
   const [liked, setLiked] = useState(false);
 
   const history = useHistory();
@@ -36,13 +45,19 @@ const SingleMintNft = () => {
         <div className="w-full flex flex-col my-4">
           {/* Header */}
           <div className="flex flex-col md:flex-row md:space-x-8 ">
-            <div className="w-full md:w-6/12  lg:w-4/12">
-              <img src={dummy} alt="use" className="w-full h-auto" />
+            <div className="w-full md:w-6/12  lg:w-4/12 flex flex-col">
+                          <img src={dummy} alt="use" className="w-full h-auto" />
+                          <div className="flex justify-between items-center w-full mt-4 space-x-4">
+                              <img src={one} alt="sd" className="w-24 h-auto"  />
+                              <img src={two} alt="sd" className="w-24 h-auto"  />
+                              <img src={three} alt="sd" className="w-24 h-auto"  />
+                              <img src={four} alt="sd" className="w-24 h-auto"  />
+                          </div>
             </div>
             <div className="w-full md:w-6/12  lg:w-7/12 flex items-start">
               <div className="flex flex-col  w-full ">
                 <div className="flex justify-between">
-                  <p className="mt-2 text-white semibold text-lg">
+                  <p className="mt-4 text-white semibold text-lg">
                     Painter #23535
                   </p>
                   <div className="flex space-x-1 items-center">
@@ -60,7 +75,7 @@ const SingleMintNft = () => {
                     <p className="regular text-grey-800">23</p>
                   </div>
                 </div>
-                <div className="flex space-x-1 mt-2">
+                <div className="flex space-x-1 mt-4">
                   <p className="text-grey-800 text-base regular">Owned by</p>
                   <p className="text-yellow opacity-80 text-base regular">
                     Daniekeys
@@ -69,21 +84,21 @@ const SingleMintNft = () => {
                 <p className="text-md text-grey-800 regular  mt-2">
                   2000 items sold
                 </p>
-                <p className="mt-6 text-grey-800 regular text-md">Price</p>
+                <p className="mt-12 text-grey-800 regular text-md">Price</p>
                 <p className="mt-2 grad-text text-lg bold">0.5343 SPT</p>
-                <div className="mt-10 flex space-x-8 items-center w-full">
+                <div className="mt-20 flex space-x-8 items-center w-full">
                   <div className="w-3/12">
-                    <ActionBtn name="Buy Now" action={handleMintModal} />
+                    <ActionBtn name="Buy now" action={handleMintModal} />
                   </div>
 
                   <div className=" w-3/12">
                     <YellowActionBtn name="Make an offer" action={Edit} />
                   </div>
                 </div>
-                <p className="mt-2 regular text-base text-grey-800">
+                <p className="mt-4 regular text-base text-grey-800">
                   Sale ends April 12, 2022 at 6:50pm WAT
                 </p>
-                <div className="mt-6 flex flex-col ">
+                <div className="mt-12 flex flex-col ">
                   <p className="text-white regular">share on social media</p>
                   <div className="w-full lg:w-full flex mt-4  mb-4 sm:space-x-8  lg:space-x-4">
                     {linksArrayA.map((item, index) => {
@@ -225,7 +240,7 @@ const SingleMintNft = () => {
             </GeneralAccordion>
           </div>
           <div className="my-12 w-full">
-            <MarketList title="More from this Owner" />
+            <MarketList title="More from this Collection" />
           </div>
         </div>
       </ParentLayout>
@@ -233,4 +248,4 @@ const SingleMintNft = () => {
   );
 };
 
-export default SingleMintNft;
+export default CollectionMintNft;
