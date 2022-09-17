@@ -20,6 +20,7 @@ import EditCreatorProfile from './pages/Profile/EditCreatorProfile';
 import SingleMintNft from './pages/Market/SingleMintNft';
 import CollectionMintNft from './pages/Market/CollectionMintNft';
 import BundleMintNft from './pages/Market/BundleMintNft';
+import ComingSoon from './pages/ComingSoon';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
       <Route path="/mint-single-nft" component={SingleMintNft} />
       <Route path="/mint-collection-nft" component={CollectionMintNft}  />
       <Route path="/mint-bundle-nft" component={BundleMintNft}  />
+      <Route path="/come" component={ComingSoon}  />
     </Switch>
   );
 }

@@ -159,6 +159,7 @@ z-index: 7;
     #8b14ef 58.82%,
     #3333ff 107.66%
   );
+  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

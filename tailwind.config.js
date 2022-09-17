@@ -26,6 +26,7 @@ module.exports = {
           body: "#020733",
           btn: "#3333FF",
           dropHeader: "#192468",
+          commingSoon: "#010E28",
         },
         grey: {
           100: "#FBFBFB",
