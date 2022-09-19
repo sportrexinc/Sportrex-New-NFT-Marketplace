@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/sportrex-logo.png";
 
 const Loading = () => {
      const [index, setIndex] = useState(0);
