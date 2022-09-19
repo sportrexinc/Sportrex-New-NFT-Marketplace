@@ -103,7 +103,7 @@ const MobileComingSoon = () => {
                   placeholder="please enter your email address"
                 />
               </div>
-              <p className="coming-soon-btn w-10/12 py-3 mx-auto h-full rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-2 ">
+              <p className="coming-soon-btn w-10/12 h-16 mx-auto  rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-2 ">
                 Notify me
               </p>
               <p className="text-center mt-2 text-base text-white regular">
