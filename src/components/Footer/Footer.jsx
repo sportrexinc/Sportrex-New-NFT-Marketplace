@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/spt-logo.svg";
+import logo from "../../assets/sportrex-logo.png";
 
 
 import telegram from "../../assets/icons/telegram.png";
@@ -88,7 +88,7 @@ const styles = {
   partA: "w-full  lg:w-3/12 mb-4 lg:mb-0 lg:flex lg:items-start",
   partAContainer:
     "w-full lg:w-full pl-2 mb-2 md:mb-0  md:pl-0 flex flex-col items-start lg:justify-start",
-  logo: "w-32  mb-4",
+  logo: "w-48  mb-4",
   partAText:
     "text-grey text-[1rem] md:text-[1.2rem] regular w-8/12 md:w-full",
   partB:

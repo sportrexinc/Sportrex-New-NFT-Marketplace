@@ -10,6 +10,18 @@ background-size: cover;
 background-repeat: no-repeat;
 
 }
+.mobile-coming-soon-bg{
+ 
+/* background: linear-gradient(91.02deg, #FAC744 1.95%, #8B14EF 58.82%, #3333FF 107.66%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF); */
+background: url("./images/mobile-coming-soon.png");
+height: 100vh;
+width: 100%;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+
+}
 
 .coming-soon-btn{
       background: linear-gradient(110.01deg, rgba(51, 51, 255, 0.5) 43.57%, rgba(145, 65, 216, 0.5) 64.91%, rgba(250, 199, 68, 0.5) 98.8%);
@@ -48,11 +60,29 @@ border-image-source: linear-gradient(91.02deg, #FAC744 8.95%, #8B14EF 58.82%, #3
   display: grid;
   place-items: center;
   border-radius: 10px;
+  filter: blur(100%);
+
 }
 .boxoA{
-   width: 129px;
-  height: 86px;
-  border-radius: 10px;
+width: 131px;
+height: 88px;
+left: 0px;
+top: 0px;
+border-radius: 10px;
+background: rgba(255, 255, 255, 0.08);
+box-shadow: inset 1px 1px 4px #FFFFFF;
+backdrop-filter: blur(4px);
+}
 
-  background-color: #8B14EF !important;
+@media screen and (max-width: 767px) {
+  .boxoA{
+width: 86px;
+height: 75px;
+left: 0px;
+top: 0px;
+border-radius: 10px;
+background: rgba(255, 255, 255, 0.08);
+box-shadow: inset 1px 1px 4px #FFFFFF;
+backdrop-filter: blur(4px);
+}
 }

@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import logo from "../../assets/spt-logo.svg";
+import logo from "../../assets/sportrex-logo.png";
 import { navData } from "../../constants/Navbar";
 import { Link } from "react-router-dom";
 import Language from "../Language/Language";
@@ -26,7 +26,7 @@ const DesktopNav = () => {
     >
       <div className="w-full flex justify-between items-center 2xl:container 2xl:mx-auto ">
         <div className="w-4/12 h-auto">
-          <img src={logo} alt="logo" className="w-32" />
+          <img src={logo} alt="logo" className="w-48" />
         </div>
         <div className="right w-8/12 flex ">
           <ul className="w-full flex items-center justify-around">
