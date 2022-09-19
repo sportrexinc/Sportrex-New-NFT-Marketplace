@@ -77,7 +77,7 @@ const ComingSoon = () => {
             <div className="in w-full justify-center items-center">
               <h1 className="text-[64px] text-white mt-5 bold text-center">
                 INTO THE{" "}
-                <span className="coming-soon-text"> MARTKET PLACE </span>
+                <span className="coming-soon-text"> MARTKETPLACE </span>
               </h1>
             </div>
             <h1 className="text-white text-center text-[36px] mt-4 bold">
