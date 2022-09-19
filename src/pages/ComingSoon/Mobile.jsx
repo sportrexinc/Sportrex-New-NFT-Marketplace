@@ -65,7 +65,7 @@ const linksArrayA = [
 const MobileComingSoon = () => {
   const [days, hours, minutes, seconds] = useCountdown("2022-10-10");
   return (
-    <div className="w-full min-h-screen bg-blue-commingSoon relative overflow-x-hidden  flex justify-center items-center">
+    <div className=" md:hidden w-full min-h-screen bg-blue-commingSoon relative overflow-x-hidden  flex justify-center items-center">
       <div className="coming-soon-bg ">
         <div className="2xl:container 2xl:mx-auto max-w-[1440px] mx-auto flow-hide h-screen">
           <div className="w-full flex flex-col items-center justify-center">
@@ -96,14 +96,14 @@ const MobileComingSoon = () => {
             </div>
 
             <div className="mt-10 w-full mb-20">
-              <div className="2xl:w-5/12 w-11/12 mx-auto flex items-center bg-[#152139] h-16 rounded-[20px] ">
+              <div className="2xl:w-5/12 w-10/12 mx-auto flex items-center bg-[#152139] h-16 rounded-[20px] ">
                 <input
                   type="text"
                   className="w-full pl-8 pr-2 py-1 bg-transparent placeholder:text-grey-300 outline-none border-none regular text-white"
                   placeholder="please enter your email address"
                 />
               </div>
-              <p className="coming-soon-btn w-11/12 py-3 mx-auto h-full rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-6">
+              <p className="coming-soon-btn w-10/12 py-3 mx-auto h-full rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-6 ">
                 Notify me
               </p>
               <p className="text-center mt-2 text-base text-white regular">
