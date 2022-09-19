@@ -95,7 +95,7 @@ const ComingSoon = () => {
             </div>
 
             <div className="mt-10 w-full mb-20">
-              <div className="2xl:w-5/12 w-10/12 mx-auto flex items-center bg-[#152139] h-16 rounded-[20px] ">
+              <div className="2xl:w-5/12  w-6/12 mx-auto flex items-center bg-[#152139] h-16 rounded-[20px] ">
                 <input
                   type="text"
                   className="w-9/12 pl-8 pr-2 py-1 bg-transparent placeholder:text-grey-300 outline-none border-none regular text-white"
