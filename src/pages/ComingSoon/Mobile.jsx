@@ -73,15 +73,15 @@ const MobileComingSoon = () => {
               <img src={logo} alt="logo" className="w-full h-auto" />
             </div>
             <div className="flex-col  flex w-full justify-center items-center">
-              <h1 className="text-[36px] text-white mt-5 bold text-center">
+              <h1 className="text-[36px] text-white mt-5 bold text-center leading-3">
                 INTO THE
               </h1>
-              <h1 className="coming-soon-text text-[36px] bold">
+              <h1 className="coming-soon-text text-[36px] bold ">
                 {" "}
-                MARTKET PLACE{" "}
+                MARTKETPLACE{" "}
               </h1>
             </div>
-            <h1 className="text-white text-center text-[20px] mt-4 bold">
+            <h1 className="text-white text-center text-[20px] mt-2 bold">
               Anticipate Sportrex NFT Marketplace
             </h1>
             <div className="flex flex-col">
@@ -103,7 +103,7 @@ const MobileComingSoon = () => {
                   placeholder="please enter your email address"
                 />
               </div>
-              <p className="coming-soon-btn w-10/12 py-3 mx-auto h-full rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-6 ">
+              <p className="coming-soon-btn w-10/12 py-3 mx-auto h-full rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-2 ">
                 Notify me
               </p>
               <p className="text-center mt-2 text-base text-white regular">
@@ -152,7 +152,7 @@ const MobileComingSoon = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col items-center mt-20">
+              <div className="flex flex-col items-center mt-10">
                 <h1 className="text-white text-[24px] text-center bold w-8/12">
                   Join the Sportrex community
                 </h1>
