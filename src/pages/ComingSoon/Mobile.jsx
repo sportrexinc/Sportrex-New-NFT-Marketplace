@@ -72,7 +72,7 @@ const MobileComingSoon = () => {
             <div className="w-6/12 h-auto mt-20">
               <img src={logo} alt="logo" className="w-full h-auto" />
             </div>
-            <div className="flex-col  flex w-full justify-center items-center">
+            <div className="flex-col  flex w-full justify-center items-center mt-4">
               <h1 className="text-[36px] text-white mt-5 bold text-center leading-3">
                 INTO THE
               </h1>
