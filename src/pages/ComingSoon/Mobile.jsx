@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useState} from "react";
 import "./ComingSoon.css";
+import ResponseModal from "./Modal";
 
 import { useCountdown } from "./useCountdown";
 import logo from "../../assets/sportrex-logo.png";
@@ -64,8 +65,15 @@ const linksArrayA = [
 ];
 const MobileComingSoon = () => {
   const [days, hours, minutes, seconds] = useCountdown("2022-10-10");
+   const [open, setOpen] = useState();
+
+   const handleClose = () => {
+     setOpen(false);
+   };
   return (
     <div className=" md:hidden w-full min-h-screen bg-blue-commingSoon relative overflow-x-hidden  flex justify-center items-center">
+      <ResponseModal open={open} handleClose={handleClose} />
+
       <div className="coming-soon-bg ">
         <div className="2xl:container 2xl:mx-auto max-w-[1440px] mx-auto flow-hide h-screen">
           <div className="w-full flex flex-col items-center justify-center">
@@ -73,24 +81,22 @@ const MobileComingSoon = () => {
               <img src={logo} alt="logo" className="w-full h-auto" />
             </div>
             <div className="flex-col  flex w-full justify-center items-center mt-4">
-              <h1 className="text-[36px] text-white mt-5 bold text-center leading-3">
-                INTO THE
-              </h1>
-              <h1 className="coming-soon-text text-[36px] bold ">
-                {" "}
-                MARTKETPLACE{" "}
+              <h1 className="text-[36px] text-white mt-5 bold text-center leading-9">
+                Your seamless hallway to a world of possibilities
               </h1>
             </div>
-            <h1 className="text-white text-center text-[20px] mt-2 bold">
-              Anticipate Sportrex NFT Marketplace
+            <h1 className="text-white text-center text-[20px] mt-4 bold">
+              Anticipate Sportrex NFT
+              <span className="coming-soon-text ml-2">MarketPlace</span>
             </h1>
             <div className="flex flex-col">
               <p className="text-white mt-4 w-11/12 mx-auto text-center text-base regular leading-8 ">
-                A place to Buy, Sell, Stake and earn yield on the most liquid
-                decentralized NFTs, and also view
+                Home to virtual assets, digital arts and collectibles. Through
+                our platform, users will be able to access the most amazing NFT
+                deal for all categories of users, with VR/AR
               </p>
               <div className="flex justify-center  text-white text-base items-center">
-                your NFTs in VR/AR Mode
+                 experience.
                 <img src={ComingImg} alt="ocu" className="w-8 ml-2 " />
               </div>
             </div>
@@ -103,7 +109,10 @@ const MobileComingSoon = () => {
                   placeholder="please enter your email address"
                 />
               </div>
-              <p className="coming-soon-btn w-10/12 h-16 mx-auto  rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-2 ">
+              <p
+                className="coming-soon-btn w-10/12 h-16 mx-auto  rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-2 "
+                onClick={() => setOpen(true)}
+              >
                 Notify me
               </p>
               <p className="text-center mt-2 text-base text-white regular">
@@ -120,7 +129,7 @@ const MobileComingSoon = () => {
                         </p>
                       </div>
                     </div>
-                    <p className="text-white semi-bold text-2xl text-center">
+                    <p className="text-white semibold text-2xl text-center">
                       Days
                     </p>
                   </div>
@@ -133,7 +142,7 @@ const MobileComingSoon = () => {
                         </p>
                       </div>
                     </div>
-                    <p className="text-white semi-bold text-2xl text-center">
+                    <p className="text-white semibold text-2xl text-center">
                       Hours
                     </p>
                   </div>
@@ -146,7 +155,7 @@ const MobileComingSoon = () => {
                         </p>
                       </div>
                     </div>
-                    <p className="text-white semi-bold text-2xl text-center">
+                    <p className="text-white semibold text-2xl text-center">
                       Minutes
                     </p>
                   </div>
