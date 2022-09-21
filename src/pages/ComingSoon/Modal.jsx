@@ -5,15 +5,26 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { FaTimesCircle } from "react-icons/fa";
 
+import telegram from "../../assets/icons/telegram.png";
+import twitter from "../../assets/icons/twitter.png";
+import instagram from "../../assets/icons/instagram.png";
+import discord from "../../assets/icons/discord.png";
+import twitch from "../../assets/icons/twitch.png";
+import facebook from "../../assets/icons/facebook.png";
+import youtube from "../../assets/icons/youtube.png";
+import medium from "../../assets/icons/medium.png";
+import reddit from "../../assets/icons/reddit.png";
+import tiktok from "../../assets/icons/tiktok.png";
 
-import telegram from "./images/telegram.svg";
-import twitter from "./images/twitter.svg";
-import instagram from "./images/instagram.svg";
-import discord from "./images/discord.svg";
-import twitch from "./images/twitch.svg";
-import youtube from "./images/youtube.svg";
-import medium from "./images/medium.svg";
-import tiktok from "./images/tiktok.svg";
+
+// import telegram from "./images/telegram.svg";
+// import twitter from "./images/twitter.svg";
+// import instagram from "./images/instagram.svg";
+// import discord from "./images/discord.svg";
+// import twitch from "./images/twitch.svg";
+// import youtube from "./images/youtube.svg";
+// import medium from "./images/medium.svg";
+// import tiktok from "./images/tiktok.svg";
 const linksArrayA = [
   {
     id: "1",
@@ -107,6 +118,9 @@ export default function ResponseModal({ open, handleClose }) {
                 />
               </div>
             </div>
+            {/* <div className="w-full">
+              <iframe src="https://giphy.com/embed/26FL4fdR9oRs2tdEA"   className="w-full aspect-ratio "    />
+            </div> */}
             <div className="mt-6 md:mt-10 flex space-x-8 justify-center items-center">
               <h1 className="w-10/12 md:w-8/12 text-[24px]  md:text-[36px] mx-auto text-center text-[#09ce35] bold">
                 Email Recieved Successfully

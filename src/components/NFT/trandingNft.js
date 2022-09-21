@@ -7,7 +7,7 @@ import {IoIosArrowForward} from 'react-icons/io';
 const TrendingNFT = () => {
   return (
     <NormalLayout>
-      <div className="trending-bg  p-2 sm:p-6 lg:p-20 ">
+      <div className="trending-bg  p-2 sm:p-6 lg:p-20 rounded-[30px] ">
         <div className="w-full  ">
           <div className="w-full flex justify-between items-center mb-[32px] md:mb-[51px]">
             <h1 className="md:text-3xl md:leading-[28px] font-[700] bold   text-start  text-white">

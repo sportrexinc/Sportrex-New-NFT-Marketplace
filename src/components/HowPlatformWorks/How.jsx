@@ -34,7 +34,7 @@ const options = [
     imageAlt: "animator",
     name: "Go to vault",
     id: 3,
-    path:"/vault"
+    path:"/staking"
   },
 ];
 

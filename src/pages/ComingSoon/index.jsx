@@ -5,14 +5,26 @@ import MobileComingSoon from './Mobile';
 import { useCountdown } from './useCountdown';
 import logo from "../../assets/sportrex-logo.png";
 import ComingImg from "../../assets/coming-soon/coming-soon-ocu.svg";
-import telegram from "./images/telegram.svg";
-import twitter from "./images/twitter.svg";
-import instagram from "./images/instagram.svg";
-import discord from "./images/discord.svg";
-import twitch from "./images/twitch.svg";
-import youtube from "./images/youtube.svg";
-import medium from "./images/medium.svg";
-import tiktok from "./images/tiktok.svg";
+import telegram from "../../assets/icons/telegram.png";
+import twitter from "../../assets/icons/twitter.png";
+import instagram from "../../assets/icons/instagram.png";
+import discord from "../../assets/icons/discord.png";
+import twitch from "../../assets/icons/twitch.png";
+import facebook from "../../assets/icons/facebook.png";
+import youtube from "../../assets/icons/youtube.png";
+import medium from "../../assets/icons/medium.png";
+import reddit from "../../assets/icons/reddit.png";
+import tiktok from "../../assets/icons/tiktok.png";
+
+
+// import telegram from "./images/telegram.svg";
+// import twitter from "./images/twitter.svg";
+// import instagram from "./images/instagram.svg";
+// import discord from "./images/discord.svg";
+// import twitch from "./images/twitch.svg";
+// import youtube from "./images/youtube.svg";
+// import medium from "./images/medium.svg";
+// import tiktok from "./images/tiktok.svg";
 const linksArrayA = [
   {
     id: "1",
@@ -87,14 +99,14 @@ const ComingSoon = () => {
                 </h1>
               </div>
               <h1 className="text-white text-center text-[36px] mt-4 bold">
-                Anticipate Sportrex NFT
-                <span className="coming-soon-text ml-2">MarketPlace</span>
+                Anticipate Sportrex NFT MarketPlace
+                {/* <span className="coming-soon-text ml-2">MarketPlace</span> */}
               </h1>
               <div className="flex flex-col">
                 <p className="text-white mt-4 w-8/12 2xl:w-7/12 mx-auto text-center text-[24px] regular leading-9 ">
                   Home to virtual assets, digital arts and collectibles. Through
                   our platform, users will be able to access the most amazing
-                  NFT deal for all 
+                  NFT deal for all
                 </p>
                 <div className="flex justify-center  text-white text-[24px] items-center">
                   categories of users, with VR/AR experience.

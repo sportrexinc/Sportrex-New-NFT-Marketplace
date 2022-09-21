@@ -6,11 +6,11 @@ import NormalLayout from "../../layouts/NormalLayout";
 const items = ["1", "1", "1", "1", "1", "1", "1", "1"];
 const Testing = () => {
   return (
-    // <NormalLayout>
+    <NormalLayout>
       <div>
-        <div className="relative w-full h-auto hidden md:block">
+        <div className="relative w-full h-auto hidden md:block rounded-[30px]">
           <div className="w-full h-auto  ">
-            <img src={cat} alt="ere" className="w-full lg:h-auto sm:h-[300px]" />
+            <img src={cat} alt="ere" className="w-full lg:h-auto sm:h-[300px] rounded-[40px]" />
           </div>
 
           <div className="absolute top-0 left-0  ">
@@ -62,7 +62,7 @@ const Testing = () => {
           </div>
         </div>
       </div>
-    // </NormalLayout>
+     </NormalLayout>
   );
 };
 

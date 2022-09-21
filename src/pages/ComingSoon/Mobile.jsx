@@ -5,14 +5,24 @@ import ResponseModal from "./Modal";
 import { useCountdown } from "./useCountdown";
 import logo from "../../assets/sportrex-logo.png";
 import ComingImg from "../../assets/coming-soon/coming-soon-ocu.svg";
-import telegram from "./images/telegram.svg";
-import twitter from "./images/twitter.svg";
-import instagram from "./images/instagram.svg";
-import discord from "./images/discord.svg";
-import twitch from "./images/twitch.svg";
-import youtube from "./images/youtube.svg";
-import medium from "./images/medium.svg";
-import tiktok from "./images/tiktok.svg";
+import telegram from "../../assets/icons/telegram.png";
+import twitter from "../../assets/icons/twitter.png";
+import instagram from "../../assets/icons/instagram.png";
+import discord from "../../assets/icons/discord.png";
+import twitch from "../../assets/icons/twitch.png";
+import facebook from "../../assets/icons/facebook.png";
+import youtube from "../../assets/icons/youtube.png";
+import medium from "../../assets/icons/medium.png";
+import reddit from "../../assets/icons/reddit.png";
+import tiktok from "../../assets/icons/tiktok.png";
+// import telegram from "./images/telegram.svg";
+// import twitter from "./images/twitter.svg";
+// import instagram from "./images/instagram.svg";
+// import discord from "./images/discord.svg";
+// import twitch from "./images/twitch.svg";
+// import youtube from "./images/youtube.svg";
+// import medium from "./images/medium.svg";
+// import tiktok from "./images/tiktok.svg";
 const linksArrayA = [
   {
     id: "1",
@@ -86,8 +96,8 @@ const MobileComingSoon = () => {
               </h1>
             </div>
             <h1 className="text-white text-center text-[20px] mt-4 bold">
-              Anticipate Sportrex NFT
-              <span className="coming-soon-text ml-2">MarketPlace</span>
+              Anticipate Sportrex NFT MarketPlace
+              {/* <span className="coming-soon-text ml-2">MarketPlace</span> */}
             </h1>
             <div className="flex flex-col">
               <p className="text-white mt-4 w-11/12 mx-auto text-center text-base regular leading-8 ">
@@ -96,7 +106,7 @@ const MobileComingSoon = () => {
                 deal for all categories of users, with VR/AR
               </p>
               <div className="flex justify-center  text-white text-base items-center">
-                 experience.
+                experience.
                 <img src={ComingImg} alt="ocu" className="w-8 ml-2 " />
               </div>
             </div>
