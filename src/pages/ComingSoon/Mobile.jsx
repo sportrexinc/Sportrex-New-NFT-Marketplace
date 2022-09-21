@@ -90,7 +90,7 @@ const MobileComingSoon = () => {
             <div className="w-6/12 h-auto mt-20">
               <img src={logo} alt="logo" className="w-full h-auto" />
             </div>
-            <div className="flex-col  flex w-full justify-center items-center mt-4">
+            <div className="flex-col  flex w-full justify-center items-center ">
               <h1 className="text-[36px] text-white mt-5 bold text-center leading-9">
                 Your seamless hallway to a world of possibilities
               </h1>
@@ -114,7 +114,7 @@ const MobileComingSoon = () => {
             </div>
 
             <div className="mt-5 w-full ">
-              <p className="text-center mb-3 text-base text-white regular">
+              <p className="text-center mb-3 text-md text-white regular">
                 **Notify me when website launch**
               </p>
               <div className="2xl:w-5/12 w-10/12 mx-auto flex items-center bg-[#152139] h-16 rounded-[20px] ">
