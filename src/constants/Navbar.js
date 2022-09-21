@@ -24,10 +24,5 @@ export const navData = [
 
     linkTo: "/staking",
   },
-  {
-    id: 5,
-    text: "Resources",
-
-    linkTo: "/faq",
-  },
+ 
 ];

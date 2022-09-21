@@ -3,11 +3,12 @@ import logo from "../../assets/sportrex-logo.png";
 import { navData } from "../../constants/Navbar";
 import { Link,useHistory } from "react-router-dom";
 import Language from "../Language/Language";
+import Resources from "./Resources";
 import ConnectModal from "../modals/WalletConnectModal";
 import { FaUserCircle, FaBell } from "react-icons/fa";
 const styles = {
-  active: "text-white light text-[18px] border-b-[1px] border-white",
-  inactive: "text-white text-[18px] text-grey light",
+  active: "text-white regular light text-[18px] border-b-[1px] border-white",
+  inactive: "text-white text-[18px] text-grey-800 regular",
   listItem: "flex items-center justify-center",
 };
 const ConnectedNav = ({ current }) => {
@@ -44,6 +45,9 @@ const ConnectedNav = ({ current }) => {
                 </li>
               );
             })}
+            <li className={styles.listItem}>
+              <Resources />
+            </li>
             <li className={styles.listItem}>
               <Language />
             </li>
