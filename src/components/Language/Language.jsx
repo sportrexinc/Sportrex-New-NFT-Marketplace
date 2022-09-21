@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
 import i18next from "i18next";
 import cookies from "js-cookie";
+
 const styles = {
   parent: "flex relative w-full h-full flex-col bg-blue-header ",
   sectionA:
     "flex justify-between items-center space-x-4 cursor-pointer text-white text-base md:text-xl biome-semibold",
   sectionB: "relative",
   close: "hidden",
-  listContainer: "absolute top-8  left-0 bg-blue-header px-2 rounded-sm pt-2 w-48 flex flex-col",
+  listContainer: "absolute top-8 lg:top-16  left-0 bg-blue-header px-2 rounded-sm pt-2 w-48 flex flex-col",
   item: "w-full py-4 text-white hover:bg-blue-btn",
 };
 const languages = [

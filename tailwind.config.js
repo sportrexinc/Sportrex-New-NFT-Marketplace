@@ -20,6 +20,7 @@ module.exports = {
         black: "#000",
         yellow: "#FAC744",
         white: "#ffffff",
+        green:"#67CE67",
         blue: {
           header: "#0E1648",
           card: "#0E1648",
