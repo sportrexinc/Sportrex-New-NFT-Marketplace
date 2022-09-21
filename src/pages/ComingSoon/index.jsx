@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import "./ComingSoon.css"
+import {FaCopyright} from "react-icons/fa"
 import ResponseModal from './Modal';
 import MobileComingSoon from './Mobile';
 import { useCountdown } from './useCountdown';
@@ -99,8 +100,10 @@ const ComingSoon = () => {
                 </h1>
               </div>
               <h1 className="text-white text-center text-[36px] mt-4 bold">
-                Anticipate Sportrex NFT MarketPlace
-                {/* <span className="coming-soon-text ml-2">MarketPlace</span> */}
+                Anticipate
+                <span className="coming-soon-text ml-2">
+                  Sportrex NFT MarketPlace
+                </span>
               </h1>
               <div className="flex flex-col">
                 <p className="text-white mt-4 w-8/12 2xl:w-7/12 mx-auto text-center text-[24px] regular leading-9 ">
@@ -118,8 +121,8 @@ const ComingSoon = () => {
                 <div className="2xl:w-5/12  w-6/12 mx-auto flex items-center bg-[#152139] h-16 rounded-[20px] ">
                   <input
                     type="text"
-                    className="w-9/12 pl-8 pr-2 py-1 bg-transparent placeholder:text-grey-300 outline-none border-none regular text-white"
-                    placeholder="please enter your email address"
+                    className="w-6/12 mx-auto pl-8 pr-10 py-1 bg-transparent placeholder:text-grey-300 outline-none border-none regular text-white"
+                    placeholder=" Enter your email "
                   />
                   <p
                     className="coming-soon-btn w-3/12 h-full rounded-[20px] cursor-pointer text-white bold text-[20px] text-center flex justify-center items-center"
@@ -200,6 +203,12 @@ const ComingSoon = () => {
                       );
                     })}
                   </div>
+                </div>
+                <div className="mt-16 flex space-x-2 items-center justify-center">
+                  <FaCopyright className="text-white regular text-[28px]" />
+                  <p className="text-white bold text-[18px]">
+                    2022 Sportrex Inc. All right reserved
+                  </p>
                 </div>
               </div>
             </div>

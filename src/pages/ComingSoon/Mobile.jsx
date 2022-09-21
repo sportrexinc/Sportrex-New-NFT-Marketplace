@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import "./ComingSoon.css";
 import ResponseModal from "./Modal";
-
+import { FaCopyright } from "react-icons/fa";
 import { useCountdown } from "./useCountdown";
 import logo from "../../assets/sportrex-logo.png";
 import ComingImg from "../../assets/coming-soon/coming-soon-ocu.svg";
@@ -96,8 +96,10 @@ const MobileComingSoon = () => {
               </h1>
             </div>
             <h1 className="text-white text-center text-[20px] mt-4 bold">
-              Anticipate Sportrex NFT MarketPlace
-              {/* <span className="coming-soon-text ml-2">MarketPlace</span> */}
+              Anticipate
+              <span className="coming-soon-text ml-2">
+                Sportrex NFT MarketPlace
+              </span>
             </h1>
             <div className="flex flex-col">
               <p className="text-white mt-4 w-11/12 mx-auto text-center text-base regular leading-8 ">
@@ -111,12 +113,15 @@ const MobileComingSoon = () => {
               </div>
             </div>
 
-            <div className="mt-10 w-full mb-20">
+            <div className="mt-5 w-full ">
+              <p className="text-center mb-3 text-base text-white regular">
+                **Notify me when website launch**
+              </p>
               <div className="2xl:w-5/12 w-10/12 mx-auto flex items-center bg-[#152139] h-16 rounded-[20px] ">
                 <input
                   type="text"
-                  className="w-full pl-8 pr-2 py-1 bg-transparent placeholder:text-grey-300 outline-none border-none regular text-white"
-                  placeholder="please enter your email address"
+                  className="w-full pl-8 pr-2 py-1 bg-transparent placeholder:text-center placeholder:text-grey-300 outline-none border-none regular text-white"
+                  placeholder=" Enter your email"
                 />
               </div>
               <p
@@ -125,9 +130,7 @@ const MobileComingSoon = () => {
               >
                 Notify me
               </p>
-              <p className="text-center mt-2 text-base text-white regular">
-                **Notify me when website launch**
-              </p>
+
               <div className="time flex flex-col items-center mt-10">
                 <h1 className="text-white text-[24px] bold">Time remaining</h1>
                 <div className="flex space-x-4 mt-4 ">
@@ -196,6 +199,12 @@ const MobileComingSoon = () => {
                   })}
                 </div>
               </div>
+            </div>
+            <div className="mt-8 flex space-x-2 items-center justify-center mb-12">
+              <FaCopyright className="text-white regular text-[24px]" />
+              <p className="text-white bold text-[14px]">
+                2022 Sportrex Inc. All right reserved
+              </p>
             </div>
           </div>
         </div>
