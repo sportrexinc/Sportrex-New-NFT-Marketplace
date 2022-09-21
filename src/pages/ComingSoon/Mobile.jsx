@@ -125,7 +125,7 @@ const MobileComingSoon = () => {
                 />
               </div>
               <p
-                className="coming-soon-btn w-10/12 h-16 mx-auto  rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-2 "
+                className="coming-soon-btn w-10/12 h-16 mx-auto  rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-1 "
                 onClick={() => setOpen(true)}
               >
                 Notify me
