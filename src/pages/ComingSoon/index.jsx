@@ -134,7 +134,7 @@ const ComingSoon = () => {
                 <p className="text-center mt-2 text-base text-white regular">
                   **Notify me when website launch**
                 </p>
-                <div className="time flex flex-col items-center mt-10">
+                {/* <div className="time flex flex-col items-center mt-10">
                   <h1 className="text-white text-[28px] bold">
                     Time remaining
                   </h1>
@@ -178,8 +178,8 @@ const ComingSoon = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-                <div className="flex flex-col items-center mt-20">
+                </div> */}
+                <div className="flex flex-col items-center mt-16">
                   <h1 className="text-white text-[28px] text-center bold">
                     Join the Sportrex community
                   </h1>

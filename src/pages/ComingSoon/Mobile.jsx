@@ -131,7 +131,7 @@ const MobileComingSoon = () => {
                 Notify me
               </p>
 
-              <div className="time flex flex-col items-center mt-10">
+              {/* <div className="time flex flex-col items-center mt-10">
                 <h1 className="text-white text-[24px] bold">Time remaining</h1>
                 <div className="flex space-x-4 mt-4 ">
                   <div className="flex flex-col space-y-3">
@@ -173,7 +173,7 @@ const MobileComingSoon = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="flex flex-col items-center mt-10">
                 <h1 className="text-white text-[24px] text-center bold w-8/12">
                   Join the Sportrex community
