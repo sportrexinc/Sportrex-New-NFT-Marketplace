@@ -2,9 +2,19 @@
  
 /* background: linear-gradient(91.02deg, #FAC744 1.95%, #8B14EF 58.82%, #3333FF 107.66%),
 linear-gradient(0deg, #FFFFFF, #FFFFFF); */
-background: url("../../assets/coming-soon/coming-soon.png");
+background: url("../../assets/gifs/desktop");
 height: 100vh;
 width: 100%;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+.coming-overlay{
+  background: rgba(16, 11, 73, 0.6);
+  position: absolute;
+width: 100%;
+height: 100vh;
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
@@ -72,6 +82,9 @@ border-radius: 10px;
 background: rgba(255, 255, 255, 0.08);
 box-shadow: inset 1px 1px 4px #FFFFFF;
 backdrop-filter: blur(4px);
+}
+.grad-bg{
+  background: linear-gradient(91.02deg, #FAC744 8.95%, #8B14EF 58.82%, #3333FF 107.66%);
 }
 
 @media screen and (max-width: 767px) {
