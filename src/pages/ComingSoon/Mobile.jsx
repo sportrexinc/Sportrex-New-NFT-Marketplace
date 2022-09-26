@@ -1,5 +1,8 @@
-import React,{useState} from "react";
+import React,{useState,useEffect,useRef} from "react";
 import "./ComingSoon.css";
+import sound from "../../assets/coming-soon/background-sound.mpeg";
+import { AiOutlineAudio, AiOutlineAudioMuted } from "react-icons/ai";
+
 import ResponseModal from "./Modal";
 import { FaCopyright } from "react-icons/fa";
 import { useCountdown } from "./useCountdown";
@@ -74,28 +77,70 @@ const linksArrayA = [
   },
 ];
 const MobileComingSoon = () => {
+  const audioRef = useRef();
+  const [play, setPlay] = useState(false);
+
   const [days, hours, minutes, seconds] = useCountdown("2022-10-10");
    const [open, setOpen] = useState();
+  useEffect(() => {
+    setTimeout(() => {
+      setPlay(true);
+    }, 5000);
+  }, []);
+
+  useEffect(() => {
+    if (play) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [play]);
 
    const handleClose = () => {
      setOpen(false);
    };
   return (
-    <div className=" md:hidden w-full min-h-screen bg-blue-commingSoon relative overflow-x-hidden  flex justify-center items-center">
+    <div className=" md:hidden w-full min-h-screen coming-soon-mobile relative overflow-x-hidden  flex justify-center items-center">
       <ResponseModal open={open} handleClose={handleClose} />
 
-      <div className="coming-soon-bg ">
-        <div className="2xl:container 2xl:mx-auto max-w-[1440px] mx-auto flow-hide h-screen">
-          <div className="w-full flex flex-col items-center justify-center">
-            <div className="w-6/12 h-auto mt-20">
-              <img src={logo} alt="logo" className="w-full h-auto" />
+      <div className="coming-overlay ">
+        <div className=" mx-auto flow-hide h-screen">
+          <div className="w-full flex flex-col items-center justify-center px-4 mt-20">
+            <div className="flex justify-between w-full items-center">
+              <div className="w-[191px] h-auto ">
+                <img src={logo} alt="logo" className="w-full h-auto" />
+              </div>
+              <audio
+                // controls
+                loop
+                autoPlay
+                // play={true}
+                muted={!play}
+                className="opacity-0"
+                ref={audioRef}
+              >
+                <source src={sound} type="audio/mpeg" />
+              </audio>
+              <div className="flex  items-center space-x-2">
+                <a
+                  href="https://media.publit.io/file/SPORTREX-WHITE-PAPER.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white regular cursor-pointer text-md"
+                >
+                  Whitepaper
+                </a>
+
+                <span
+                  className="grad-bg w-8 h-8 grid place-items-center rounded-full text-white text-xl cursor-pointer"
+                  onClick={() => setPlay(!play)}
+                >
+                  {play ? <AiOutlineAudio /> : <AiOutlineAudioMuted />}
+                </span>
+              </div>
             </div>
-            <div className="flex-col  flex w-full justify-center items-center ">
-              <h1 className="text-[36px] text-white mt-5 bold text-center leading-9">
-                Your seamless hallway to a world of possibilities
-              </h1>
-            </div>
-            <h1 className="text-white text-center text-[20px] mt-4 bold">
+
+            <h1 className="text-white text-center text-[36px] mt-16 bold">
               Anticipate
               <span className="coming-soon-text ml-2">
                 Sportrex NFT MarketPlace
@@ -114,14 +159,11 @@ const MobileComingSoon = () => {
             </div>
 
             <div className="mt-5 w-full ">
-              <p className="text-center mb-3 text-md text-white regular">
-                **Notify me when website launch**
-              </p>
               <div className="2xl:w-5/12 w-10/12 mx-auto flex items-center bg-[#152139] h-16 rounded-[20px] ">
                 <input
                   type="text"
-                  className="w-full pl-8 pr-2 py-1 bg-transparent placeholder:text-center placeholder:text-grey-300 outline-none border-none regular text-white"
-                  placeholder=" Enter your email"
+                  className="w-full pl-2 pr-2 py-1 bg-transparent placeholder:text-center placeholder:text-grey-300 outline-none border-none regular text-white placeholder:text-md"
+                  placeholder=" Enter your email or Ens address"
                 />
               </div>
               <p
@@ -129,6 +171,9 @@ const MobileComingSoon = () => {
                 onClick={() => setOpen(true)}
               >
                 Notify me
+              </p>
+              <p className="text-center mb-3 text-md text-white regular">
+                **Notify me when website launch**
               </p>
 
               {/* <div className="time flex flex-col items-center mt-10">
@@ -174,8 +219,8 @@ const MobileComingSoon = () => {
                   </div>
                 </div>
               </div> */}
-              <div className="flex flex-col items-center mt-10">
-                <h1 className="text-white text-[24px] text-center bold w-8/12">
+              <div className="flex flex-col items-center mt-20">
+                <h1 className="text-white text-[16px] text-center bold w-8/12">
                   Join the Sportrex community
                 </h1>
                 <div className="flex space-x-2 mt-4">
@@ -200,7 +245,7 @@ const MobileComingSoon = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-8 flex space-x-2 items-center justify-center mb-12">
+            <div className="mt-16 flex space-x-2 items-center justify-center mb-12">
               <FaCopyright className="text-white regular text-[24px]" />
               <p className="text-white bold text-[14px]">
                 2022 Sportrex Inc. All right reserved

@@ -10,6 +10,18 @@ background-size: cover;
 background-repeat: no-repeat;
 
 }
+.coming-soon-mobile{
+ 
+/* background: linear-gradient(91.02deg, #FAC744 1.95%, #8B14EF 58.82%, #3333FF 107.66%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF); */
+background: url("../../assets/gifs/desktop");
+height: 100vh;
+width: 100%;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+
+}
 .coming-overlay{
   background: rgba(16, 11, 73, 0.6);
   position: absolute;

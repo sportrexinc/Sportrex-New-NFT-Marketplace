@@ -1,10 +1,11 @@
-import React,{useState} from 'react'
-import "./ComingSoon.css"
-import {FaCopyright} from "react-icons/fa"
-import ResponseModal from './Modal';
-import MobileComingSoon from './Mobile';
-import { useCountdown } from './useCountdown';
-import NormalLayout from '../../layouts/NormalLayout';
+import React, { useState, useRef, useEffect } from "react";
+import "./ComingSoon.css";
+import sound from "../../assets/coming-soon/background-sound.mpeg";
+import { FaCopyright } from "react-icons/fa";
+import ResponseModal from "./Modal";
+import MobileComingSoon from "./Mobile";
+import { useCountdown } from "./useCountdown";
+import NormalLayout from "../../layouts/NormalLayout";
 import { AiOutlineAudio, AiOutlineAudioMuted } from "react-icons/ai";
 import logo from "../../assets/sportrex-logo.png";
 import ComingImg from "../../assets/coming-soon/coming-soon-ocu.svg";
@@ -18,7 +19,6 @@ import youtube from "../../assets/icons/youtube.png";
 import medium from "../../assets/icons/medium.png";
 import reddit from "../../assets/icons/reddit.png";
 import tiktok from "../../assets/icons/tiktok.png";
-
 
 // import telegram from "./images/telegram.svg";
 // import twitter from "./images/twitter.svg";
@@ -79,17 +79,56 @@ const linksArrayA = [
   },
 ];
 const ComingSoon = () => {
+  const [isDesktop, setIsDesktop] = useState(true);
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      setIsDesktop(true)
+    }
+    else {
+      setIsDesktop(false);
+    }
+  
+ 
+  }, [isDesktop])
+  
+  return (
+    <>
+      {
+        isDesktop ? <Desktop /> : <MobileComingSoon />
+      }
+    
+    </>
+  );
+};
 
+export default ComingSoon;
+
+const Desktop = () => { 
+   const audioRef = useRef();
   const [days, hours, minutes, seconds] = useCountdown("2022-10-10");
   const [open, setOpen] = useState();
-  
+  const [play, setPlay] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setPlay(true);
+    }, 5000);
+  }, []);
+
+  useEffect(() => {
+    if (play) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+    
+  }, [play]);
 
   const handleClose = () => {
     setOpen(false);
-  }
+  };
   return (
     <>
-      <div className="w-full min-h-screen bg-blue-commingSoon relative overflow-x-hidden  md:flex justify-center items-center hidden  ">
+      <div className="w-full min-h-screen bg-blue-commingSoon relative overflow-x-hidden  md:flex justify-center items-center hidden ">
         <ResponseModal open={open} handleClose={handleClose} />
         <div className="coming-soon-bg ">
           <div className="coming-overlay ">
@@ -100,6 +139,17 @@ const ComingSoon = () => {
                     <div className="w-[181px] h-auto ">
                       <img src={logo} alt="logo" className="w-full h-auto" />
                     </div>
+                    <audio
+                      controls
+                      loop
+                      autoPlay
+                      play={true}
+                      muted={!play}
+                      className="opacity-0"
+                      ref={audioRef}
+                    >
+                      <source src={sound} type="audio/mpeg" />
+                    </audio>
                     <div className="flex space-x-8 items-center">
                       <a
                         href="https://media.publit.io/file/SPORTREX-WHITE-PAPER.pdf"
@@ -107,10 +157,14 @@ const ComingSoon = () => {
                         rel="noopener noreferrer"
                         className="text-white regular cursor-pointer"
                       >
-                        White paper
+                        Whitepaper
                       </a>
-                      <span className="grad-bg w-10 h-10 grid place-items-center rounded-full text-white text-2xl">
-                        <AiOutlineAudio />
+
+                      <span
+                        className="grad-bg w-10 h-10 grid place-items-center rounded-full text-white text-2xl cursor-pointer"
+                        onClick={() => setPlay(!play)}
+                      >
+                        {play ? <AiOutlineAudio /> : <AiOutlineAudioMuted />}
                       </span>
                     </div>
                   </div>
@@ -150,51 +204,7 @@ const ComingSoon = () => {
                     <p className=" mt-2 text-base text-white regular">
                       **Notify me when website launch**
                     </p>
-                    {/* <div className="time flex flex-col items-center mt-10">
-                  <h1 className="text-white text-[28px] bold">
-                    Time remaining
-                  </h1>
-                  <div className="flex space-x-4 mt-4 ">
-                    <div className="flex flex-col space-y-3">
-                      <div className="boxo1">
-                        <div className="boxoA grid items-center">
-                          <p className="text-white bold text-[40px] text-center">
-                            {days}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="text-white bold text-2xl text-center">
-                        Days
-                      </p>
-                    </div>
-                    <p className="text-white bold text-[40px]">:</p>
-                    <div className="flex flex-col space-y-3">
-                      <div className="boxo1">
-                        <div className="boxoA grid items-center">
-                          <p className="text-white bold text-[40px] text-center">
-                            {hours}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="text-white bold text-2xl text-center">
-                        Hours
-                      </p>
-                    </div>
-                    <p className="text-white bold text-[40px]">:</p>
-                    <div className="flex flex-col space-y-3">
-                      <div className="boxo1">
-                        <div className="boxoA grid items-center">
-                          <p className="text-white bold text-[40px] text-center">
-                            {minutes}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="text-white bold text-2xl text-center">
-                        Minutes
-                      </p>
-                    </div>
-                  </div>
-                </div> */}
+
                     <div className="flex flex-col items-center mt-16">
                       <h1 className="text-white text-[28px] text-center bold">
                         Join the Sportrex community
@@ -233,9 +243,6 @@ const ComingSoon = () => {
           </div>
         </div>
       </div>
-      <MobileComingSoon />
-    </>
-  );
+      </>
+ )
 }
-
-export default ComingSoon
