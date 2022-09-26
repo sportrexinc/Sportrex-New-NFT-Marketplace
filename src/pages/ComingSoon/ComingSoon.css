@@ -123,5 +123,7 @@ backdrop-filter: blur(4px);
 .logo-svg{
   width: 17px;
   height: 20px;
+  transform: translate(-4px,5px) ;
+
 }
 }

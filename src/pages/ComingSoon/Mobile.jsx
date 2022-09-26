@@ -191,7 +191,7 @@ const MobileComingSoon = () => {
             </div>
             <div className="mt-12 flex space-x-2 items-center justify-center mb-12">
               <FaCopyright className="text-white regular text-[24px]" />
-              <p className="text-white bold text-[14px]">
+              <p className="text-white regular text-[12px]">
                 2022 Sportrex Inc. All right reserved
               </p>
             </div>

@@ -226,7 +226,7 @@ const Desktop = () => {
                     </div>
                     <div className="mt-16 flex space-x-2 items-center justify-center">
                       <FaCopyright className="text-white regular text-[28px]" />
-                      <p className="text-white bold text-[18px]">
+                      <p className="text-white regular text-[14px]">
                         2022 Sportrex Inc. All right reserved
                       </p>
                     </div>
