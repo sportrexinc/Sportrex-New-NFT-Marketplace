@@ -118,7 +118,7 @@ const Desktop = () => {
     } else {
       audioRef.current.pause();
     }
-    
+    alert(window.innerWidth)
   }, [play]);
 
   const handleClose = () => {
