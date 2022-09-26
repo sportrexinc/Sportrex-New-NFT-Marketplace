@@ -138,19 +138,19 @@ const MobileComingSoon = () => {
             </h1>
             <div className="flex flex-col">
               <p className="text-[#f1f1f1] mt-2 w-full px-[14px] mx-auto text-center text-[18px] regular leading-[25px] ">
-                Unlocking seamless access to creators, entertainers, and artists
-                to access the most amazing NFT deals for all categories of users
-                with VR/AR experience. <span className="logo-svg"></span>
+                Home to virtual assets, digital arts and collectibles. Through
+                our platform, users will be able to access the most amazing NFT
+                deals for all categories users with VR/AR experience.{" "}
+                <span className="logo-svg"></span>
               </p>
-           
             </div>
 
             <div className="mt-5 w-full ">
               <div className="2xl:w-5/12 w-11/12 mx-auto flex items-center bg-[#152139] h-16 rounded-[20px] ">
                 <input
                   type="text"
-                  className="w-full pl-2 pr-2 py-1 bg-transparent placeholder:text-center placeholder:text-grey-300 outline-none border-none regular text-white placeholder:text-md"
-                  placeholder=" Enter your email or Ens address"
+                  className="w-full pl-2 pr-2 py-1 bg-transparent placeholder:text-center placeholder:text-[#999] placeholder:opacity-60 outline-none border-none regular text-white placeholder:text-md"
+                  placeholder=" Enter your email or ENS address"
                 />
               </div>
               <p
@@ -159,11 +159,11 @@ const MobileComingSoon = () => {
               >
                 Get Notified
               </p>
-              <p className="text-center mb-3 text-md text-white regular">
+              <p className="text-center mb-3  text-white regular text-sm">
                 **Notify me when website launch**
               </p>
 
-              <div className="flex flex-col items-center mt-10">
+              <div className="flex flex-col items-center mt-16">
                 <h1 className="text-white text-[16px] text-center bold w-full">
                   Join the Sportrex community
                 </h1>
@@ -190,7 +190,7 @@ const MobileComingSoon = () => {
               </div>
             </div>
             <div className="mt-12 flex space-x-2 items-center justify-center mb-12">
-              <FaCopyright className="text-white regular text-[24px]" />
+              <FaCopyright className="text-white regular text-[14px]" />
               <p className="text-white regular text-[12px]">
                 2022 Sportrex Inc. All right reserved
               </p>

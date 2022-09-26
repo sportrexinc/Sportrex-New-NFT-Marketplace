@@ -174,9 +174,10 @@ const Desktop = () => {
                   </h1>
                   <div className="flex flex-col">
                     <p className="text-[#f1f1f1] mt-4 w-5/12 2xl:w-5/12  text-start text-[20px] regular leading-9 pl-4 ">
-                      Unlocking seamless access to creators, entertainers, and
-                      artists to access the most amazing NFT deals for all
-                      categories of users with VR/AR experience.{" "}
+                      Home to virtual assets, digital arts and collectibles.
+                      Through our platform, users will be able to access the
+                      most amazing NFT deals for all categories users with VR/AR
+                      experience.
                       <span className="logo-svg"></span>
                     </p>
                   </div>
@@ -185,8 +186,8 @@ const Desktop = () => {
                     <div className="2xl:w-5/12  w-6/12  flex items-center bg-[#152139] h-16 rounded-[20px] ">
                       <input
                         type="text"
-                        className="w-6/12 mx-auto pl-6 py-1 bg-transparent placeholder:text-grey-300 outline-none border-none regular text-white placeholder:text-[16px]"
-                        placeholder=" Enter your email or Ens address "
+                        className="w-6/12 mx-auto pl-6 py-1 bg-transparent placeholder:text-[#999] placeholder:opacity-60 outline-none border-none regular text-white placeholder:text-[16px]"
+                        placeholder=" Enter your email or ENS address "
                       />
                       <p
                         className="coming-soon-btn w-4/12 h-full rounded-[20px] cursor-wait text-white bold text-[20px] text-center flex justify-center items-center"
@@ -195,7 +196,7 @@ const Desktop = () => {
                         Get Notified
                       </p>
                     </div>
-                    <p className=" mt-2 text-base text-white regular text-center 2xl:w-5/12  w-6/12">
+                    <p className=" mt-2 text-sm text-white regular text-center 2xl:w-5/12  w-6/12">
                       **Notify me when website launch**
                     </p>
 
@@ -225,7 +226,7 @@ const Desktop = () => {
                       </div>
                     </div>
                     <div className="mt-16 flex space-x-2 items-center justify-center">
-                      <FaCopyright className="text-white regular text-[28px]" />
+                      <FaCopyright className="text-white regular text-[14px]" />
                       <p className="text-white regular text-[14px]">
                         2022 Sportrex Inc. All right reserved
                       </p>
