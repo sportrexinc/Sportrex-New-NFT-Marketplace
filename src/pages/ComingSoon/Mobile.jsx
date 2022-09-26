@@ -73,11 +73,11 @@ const MobileComingSoon = () => {
 
   
    const [open, setOpen] = useState();
-  useEffect(() => {
-    setTimeout(() => {
-      setPlay(true);
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setPlay(true);
+  //   }, 5000);
+  // }, []);
 
   useEffect(() => {
     if (play) {
@@ -130,22 +130,19 @@ const MobileComingSoon = () => {
               </div>
             </div>
 
-            <h1 className="text-white text-center text-[36px] mt-16 bold px-4">
+            <h1 className="text-white text-center text-[34px] mt-10 bold px-4">
               Anticipate
               <span className="coming-soon-text ml-2">
                 Sportrex NFT MarketPlace
               </span>
             </h1>
             <div className="flex flex-col">
-              <p className="text-[#f1f1f1] mt-4 w-11/12 mx-auto text-center text-[20px] regular leading-[25px] ">
-                Home to virtual assets, digital arts and collectibles. Through
-                our platform, users will be able to access the most amazing NFT
-                deal for all categories of users, with
+              <p className="text-[#f1f1f1] mt-2 w-11/12 mx-auto text-center text-[18px] regular leading-[25px] ">
+                Unlocking seamless access to creators, entertainers, and artists
+                to access the most amazing NFT deals for all categories of users
+                with VR/AR experience. <span className="logo-svg"></span>
               </p>
-              <div className="flex justify-center  text-[#f1f1f1] text-base items-center regular leading-[25px]">
-                VR/AR experience.
-                <img src={ComingImg} alt="ocu" className="w-8 ml-2 " />
-              </div>
+           
             </div>
 
             <div className="mt-5 w-full ">

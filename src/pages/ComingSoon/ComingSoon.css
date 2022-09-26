@@ -10,6 +10,16 @@ background-size: cover;
 background-repeat: no-repeat;
 
 }
+.logo-svg{
+  display: inline-block;
+  width: 32px;
+  background-image: url("../../assets/coming-soon/coming-soon-ocu.svg");
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  transform: translate(-4px,10px) ;
+  height: 30px;
+}
 .coming-soon-mobile{
  
 /* background: linear-gradient(91.02deg, #FAC744 1.95%, #8B14EF 58.82%, #3333FF 107.66%),
@@ -109,5 +119,9 @@ border-radius: 10px;
 background: rgba(255, 255, 255, 0.08);
 box-shadow: inset 1px 1px 4px #FFFFFF;
 backdrop-filter: blur(4px);
+}
+.logo-svg{
+  width: 17px;
+  height: 20px;
 }
 }

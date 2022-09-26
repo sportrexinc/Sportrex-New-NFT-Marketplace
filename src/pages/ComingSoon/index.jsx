@@ -106,11 +106,11 @@ const Desktop = () => {
   // const [days, hours, minutes, seconds] = useCountdown("2022-10-10");
   const [open, setOpen] = useState();
   const [play, setPlay] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setPlay(true);
-    }, 4000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setPlay(true);
+  //   }, 4000);
+  // }, []);
 
   useEffect(() => {
     if (play) {
@@ -173,22 +173,19 @@ const Desktop = () => {
                     </span>
                   </h1>
                   <div className="flex flex-col">
-                    <p className="text-white mt-4 w-7/12 2xl:w-5/12  text-start text-[24px] regular leading-9 ">
-                      Home to virtual assets, digital arts and collectibles.
-                      Through our platform, users will be able to access the
-                      most amazing NFT deal for all
+                    <p className="text-[#f1f1f1] mt-4 w-7/12 2xl:w-5/12  text-start text-[20px] regular leading-9 ">
+                      Unlocking seamless access to creators, entertainers, and
+                      artists to access the most amazing NFT deals for all
+                      categories of users with VR/AR experience. <span className="logo-svg"></span>
                     </p>
-                    <div className="flex justify-start  text-white text-[24px] items-center">
-                      categories of users, with VR/AR experience.
-                      <img src={ComingImg} alt="ocu" className="w-12 ml-2 " />
-                    </div>
+                 
                   </div>
 
                   <div className="mt-10 w-full mb-20">
                     <div className="2xl:w-5/12  w-6/12  flex items-center bg-[#152139] h-16 rounded-[20px] ">
                       <input
                         type="text"
-                        className="w-6/12 mx-auto pl-6 py-1 bg-transparent placeholder:text-grey-300 outline-none border-none regular text-white"
+                        className="w-6/12 mx-auto pl-6 py-1 bg-transparent placeholder:text-grey-300 outline-none border-none regular text-white placeholder:text-[16px]"
                         placeholder=" Enter your email or Ens address "
                       />
                       <p
