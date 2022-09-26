@@ -118,7 +118,7 @@ const Desktop = () => {
     } else {
       audioRef.current.pause();
     }
-    alert(window.innerWidth)
+    
   }, [play]);
 
   const handleClose = () => {
@@ -173,7 +173,7 @@ const Desktop = () => {
                     </span>
                   </h1>
                   <div className="flex flex-col">
-                    <p className="text-[#f1f1f1] mt-4 w-6/12 2xl:w-5/12  text-start text-[20px] regular leading-9 pl-4 ">
+                    <p className="text-[#f1f1f1] mt-4 w-5/12 2xl:w-5/12  text-start text-[20px] regular leading-9 pl-4 ">
                       Unlocking seamless access to creators, entertainers, and
                       artists to access the most amazing NFT deals for all
                       categories of users with VR/AR experience.{" "}
