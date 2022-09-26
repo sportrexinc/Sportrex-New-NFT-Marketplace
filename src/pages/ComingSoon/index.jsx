@@ -152,7 +152,7 @@ const Desktop = () => {
                         href="https://media.publit.io/file/SPORTREX-WHITE-PAPER.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white regular cursor-pointer"
+                        className="text-[#f1f1f1] hover:text-white regular cursor-pointer"
                       >
                         Whitepaper
                       </a>
@@ -176,9 +176,9 @@ const Desktop = () => {
                     <p className="text-[#f1f1f1] mt-4 w-7/12 2xl:w-5/12  text-start text-[20px] regular leading-9 ">
                       Unlocking seamless access to creators, entertainers, and
                       artists to access the most amazing NFT deals for all
-                      categories of users with VR/AR experience. <span className="logo-svg"></span>
+                      categories of users with VR/AR experience.{" "}
+                      <span className="logo-svg"></span>
                     </p>
-                 
                   </div>
 
                   <div className="mt-10 w-full mb-20">
