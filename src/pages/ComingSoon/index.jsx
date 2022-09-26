@@ -109,7 +109,7 @@ const Desktop = () => {
   useEffect(() => {
     setTimeout(() => {
       setPlay(true);
-    }, 5000);
+    }, 4000);
   }, []);
 
   useEffect(() => {
@@ -141,7 +141,6 @@ const Desktop = () => {
                       controls
                       loop
                       autoPlay
-                  
                       muted={!play}
                       className="opacity-0"
                       ref={audioRef}
@@ -167,7 +166,7 @@ const Desktop = () => {
                     </div>
                   </div>
 
-                  <h1 className="text-white text-start text-[36px] mt-20 bold w-5/12">
+                  <h1 className="text-white text-start text-[48px] mt-20 bold w-5/12">
                     Anticipate
                     <span className="coming-soon-text ml-2">
                       Sportrex NFT MarketPlace
@@ -193,18 +192,18 @@ const Desktop = () => {
                         placeholder=" Enter your email or Ens address "
                       />
                       <p
-                        className="coming-soon-btn w-3/12 h-full rounded-[20px] cursor-wait text-white bold text-[20px] text-center flex justify-center items-center"
+                        className="coming-soon-btn w-4/12 h-full rounded-[20px] cursor-wait text-white bold text-[20px] text-center flex justify-center items-center"
                         onClick={() => setOpen(true)}
                       >
-                        Notify me
+                        Get notified
                       </p>
                     </div>
-                    <p className=" mt-2 text-base text-white regular">
+                    <p className=" mt-2 text-base text-white regular text-center 2xl:w-5/12  w-6/12">
                       **Notify me when website launch**
                     </p>
 
                     <div className="flex flex-col items-center mt-16">
-                      <h1 className="text-white text-[28px] text-center bold">
+                      <h1 className="text-white text-[20px] text-center bold">
                         Join the Sportrex community
                       </h1>
                       <div className="flex space-x-2 mt-4">
@@ -241,6 +240,6 @@ const Desktop = () => {
           </div>
         </div>
       </div>
-      </>
- )
+    </>
+  );
 }

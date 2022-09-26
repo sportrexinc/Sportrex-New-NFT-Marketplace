@@ -131,14 +131,14 @@ const MobileComingSoon = () => {
               </div>
             </div>
 
-            <h1 className="text-white text-center text-[32px] mt-16 bold px-4">
+            <h1 className="text-white text-center text-[36px] mt-16 bold px-4">
               Anticipate
               <span className="coming-soon-text ml-2">
                 Sportrex NFT MarketPlace
               </span>
             </h1>
             <div className="flex flex-col">
-              <p className="text-white mt-4 w-11/12 mx-auto text-center text-base regular leading-[25px] ">
+              <p className="text-white mt-4 w-11/12 mx-auto text-center text-[20px] regular leading-[25px] ">
                 Home to virtual assets, digital arts and collectibles. Through
                 our platform, users will be able to access the most amazing NFT
                 deal for all categories of users, with
