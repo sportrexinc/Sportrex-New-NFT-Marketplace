@@ -137,7 +137,7 @@ const MobileComingSoon = () => {
               </span>
             </h1>
             <div className="flex flex-col">
-              <p className="text-[#f1f1f1] mt-2 w-11/12 mx-auto text-center text-[18px] regular leading-[25px] ">
+              <p className="text-[#f1f1f1] mt-2 w-full px-[22px] mx-auto text-center text-[18px] regular leading-[25px] ">
                 Unlocking seamless access to creators, entertainers, and artists
                 to access the most amazing NFT deals for all categories of users
                 with VR/AR experience. <span className="logo-svg"></span>
