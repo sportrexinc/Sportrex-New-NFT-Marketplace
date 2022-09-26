@@ -195,7 +195,7 @@ const Desktop = () => {
                         className="coming-soon-btn w-4/12 h-full rounded-[20px] cursor-wait text-white bold text-[20px] text-center flex justify-center items-center"
                         onClick={() => setOpen(true)}
                       >
-                        Get notified
+                        Get Notified
                       </p>
                     </div>
                     <p className=" mt-2 text-base text-white regular text-center 2xl:w-5/12  w-6/12">

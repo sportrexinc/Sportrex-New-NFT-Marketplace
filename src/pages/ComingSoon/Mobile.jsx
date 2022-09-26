@@ -105,7 +105,6 @@ const MobileComingSoon = () => {
                 // controls
                 loop
                 autoPlay
-                
                 muted={!play}
                 className="opacity-0"
                 ref={audioRef}
@@ -138,12 +137,12 @@ const MobileComingSoon = () => {
               </span>
             </h1>
             <div className="flex flex-col">
-              <p className="text-white mt-4 w-11/12 mx-auto text-center text-[20px] regular leading-[25px] ">
+              <p className="text-[#f1f1f1] mt-4 w-11/12 mx-auto text-center text-[20px] regular leading-[25px] ">
                 Home to virtual assets, digital arts and collectibles. Through
                 our platform, users will be able to access the most amazing NFT
                 deal for all categories of users, with
               </p>
-              <div className="flex justify-center  text-white text-base items-center regular leading-[25px]">
+              <div className="flex justify-center  text-[#f1f1f1] text-base items-center regular leading-[25px]">
                 VR/AR experience.
                 <img src={ComingImg} alt="ocu" className="w-8 ml-2 " />
               </div>
@@ -161,13 +160,12 @@ const MobileComingSoon = () => {
                 className="coming-soon-btn w-10/12 h-16 mx-auto  rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-1 "
                 onClick={() => setOpen(true)}
               >
-                Notify me
+                Get Notified
               </p>
               <p className="text-center mb-3 text-md text-white regular">
                 **Notify me when website launch**
               </p>
 
-            
               <div className="flex flex-col items-center mt-10">
                 <h1 className="text-white text-[16px] text-center bold w-full">
                   Join the Sportrex community
