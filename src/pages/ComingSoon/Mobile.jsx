@@ -96,7 +96,7 @@ const MobileComingSoon = () => {
 
       <div className="coming-overlay ">
         <div className=" mx-auto flow-hide h-screen">
-          <div className="w-full flex flex-col items-center justify-center  mt-5">
+          <div className="w-full flex flex-col items-center justify-center  mt-6">
             <div className="flex justify-between w-full items-center px-4">
               <div className="w-[150px] h-auto ">
                 <img src={logo} alt="logo" className="w-full h-auto" />
