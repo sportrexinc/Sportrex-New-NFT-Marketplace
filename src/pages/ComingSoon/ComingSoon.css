@@ -130,7 +130,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF); */
   /* text-align: center; */
   white-space: nowrap;
   overflow: hidden;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
 }
 
 /* Animation */
@@ -148,7 +148,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF); */
     width: 0;
   }
   to {
-    width: 36%;
+    width: 42%;
   }
 }
 @keyframes typewriter1 {
