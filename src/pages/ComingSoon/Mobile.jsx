@@ -140,7 +140,7 @@ const MobileComingSoon = () => {
               </div>
             </div>
 
-            <h1 className="text-white text-center text-[36px] mt-16 bold">
+            <h1 className="text-white text-center text-[36px] mt-16 bold px-2">
               Anticipate
               <span className="coming-soon-text ml-2">
                 Sportrex NFT MarketPlace
