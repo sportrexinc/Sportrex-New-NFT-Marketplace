@@ -140,7 +140,7 @@ const MobileComingSoon = () => {
               </div>
             </div>
 
-            <h1 className="text-white text-center text-[36px] mt-16 bold px-2">
+            <h1 className="text-white text-center text-[32px] mt-16 bold px-4">
               Anticipate
               <span className="coming-soon-text ml-2">
                 Sportrex NFT MarketPlace
@@ -220,7 +220,7 @@ const MobileComingSoon = () => {
                 </div>
               </div> */}
               <div className="flex flex-col items-center mt-20">
-                <h1 className="text-white text-[16px] text-center bold w-8/12">
+                <h1 className="text-white text-[16px] text-center bold w-full">
                   Join the Sportrex community
                 </h1>
                 <div className="flex space-x-2 mt-4">
