@@ -166,11 +166,12 @@ const Desktop = () => {
                     </div>
                   </div>
 
-                  <h1 className="text-white text-start text-[48px] leading-[50px] mt-20 bold w-5/12">
-                    Anticipate
-                    <span className="coming-soon-text ml-2">
-                      Sportrex NFT Marketplace
-                    </span>
+                  <h1 className="text-white text-start text-[48px] leading-[50px] mt-20 bold w-5/12 line-1 anim-typewriter">
+                    Anticipate{" "}
+                    <span className="coming-soon-text ml-2">Sportrex</span>
+                  </h1>
+                  <h1 className="coming-soon-text ml-2 line-1 anim-typewriter1 bold text-[48px]">
+                    NFT Marketplace
                   </h1>
                   <div className="flex flex-col">
                     <p className="text-[#f1f1f1] mt-4 w-6/12 2xl:w-5/12  text-start text-[20px] regular leading-8 pl-4 ">
