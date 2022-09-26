@@ -114,7 +114,7 @@ const MobileComingSoon = () => {
                 // controls
                 loop
                 autoPlay
-                // play={true}
+                
                 muted={!play}
                 className="opacity-0"
                 ref={audioRef}
