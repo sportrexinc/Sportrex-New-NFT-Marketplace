@@ -5,7 +5,7 @@ import { AiOutlineAudio, AiOutlineAudioMuted } from "react-icons/ai";
 
 import ResponseModal from "./Modal";
 import { FaCopyright } from "react-icons/fa";
-import { useCountdown } from "./useCountdown";
+
 import logo from "../../assets/sportrex-logo.png";
 import ComingImg from "../../assets/coming-soon/coming-soon-ocu.svg";
 import telegram from "../../assets/icons/telegram.png";
@@ -13,19 +13,10 @@ import twitter from "../../assets/icons/twitter.png";
 import instagram from "../../assets/icons/instagram.png";
 import discord from "../../assets/icons/discord.png";
 import twitch from "../../assets/icons/twitch.png";
-import facebook from "../../assets/icons/facebook.png";
 import youtube from "../../assets/icons/youtube.png";
 import medium from "../../assets/icons/medium.png";
-import reddit from "../../assets/icons/reddit.png";
 import tiktok from "../../assets/icons/tiktok.png";
-// import telegram from "./images/telegram.svg";
-// import twitter from "./images/twitter.svg";
-// import instagram from "./images/instagram.svg";
-// import discord from "./images/discord.svg";
-// import twitch from "./images/twitch.svg";
-// import youtube from "./images/youtube.svg";
-// import medium from "./images/medium.svg";
-// import tiktok from "./images/tiktok.svg";
+
 const linksArrayA = [
   {
     id: "1",
@@ -80,7 +71,7 @@ const MobileComingSoon = () => {
   const audioRef = useRef();
   const [play, setPlay] = useState(false);
 
-  const [days, hours, minutes, seconds] = useCountdown("2022-10-10");
+  
    const [open, setOpen] = useState();
   useEffect(() => {
     setTimeout(() => {
@@ -105,9 +96,9 @@ const MobileComingSoon = () => {
 
       <div className="coming-overlay ">
         <div className=" mx-auto flow-hide h-screen">
-          <div className="w-full flex flex-col items-center justify-center px-4 mt-20">
+          <div className="w-full flex flex-col items-center justify-center px-4 mt-10">
             <div className="flex justify-between w-full items-center">
-              <div className="w-[191px] h-auto ">
+              <div className="w-[150px] h-auto ">
                 <img src={logo} alt="logo" className="w-full h-auto" />
               </div>
               <audio
@@ -176,50 +167,8 @@ const MobileComingSoon = () => {
                 **Notify me when website launch**
               </p>
 
-              {/* <div className="time flex flex-col items-center mt-10">
-                <h1 className="text-white text-[24px] bold">Time remaining</h1>
-                <div className="flex space-x-4 mt-4 ">
-                  <div className="flex flex-col space-y-3">
-                    <div className="boxo1">
-                      <div className="boxoA grid items-center">
-                        <p className="text-white bold text-[24px] text-center">
-                          {days}
-                        </p>
-                      </div>
-                    </div>
-                    <p className="text-white semibold text-2xl text-center">
-                      Days
-                    </p>
-                  </div>
-                  <p className="text-white bold text-[24px]">:</p>
-                  <div className="flex flex-col space-y-3">
-                    <div className="boxo1">
-                      <div className="boxoA grid items-center">
-                        <p className="text-white bold text-[24px] text-center">
-                          {hours}
-                        </p>
-                      </div>
-                    </div>
-                    <p className="text-white semibold text-2xl text-center">
-                      Hours
-                    </p>
-                  </div>
-                  <p className="text-white bold text-[24px]">:</p>
-                  <div className="flex flex-col space-y-3">
-                    <div className="boxo1">
-                      <div className="boxoA grid items-center">
-                        <p className="text-white bold text-[24px] text-center">
-                          {minutes}
-                        </p>
-                      </div>
-                    </div>
-                    <p className="text-white semibold text-2xl text-center">
-                      Minutes
-                    </p>
-                  </div>
-                </div>
-              </div> */}
-              <div className="flex flex-col items-center mt-20">
+            
+              <div className="flex flex-col items-center mt-10">
                 <h1 className="text-white text-[16px] text-center bold w-full">
                   Join the Sportrex community
                 </h1>
@@ -245,7 +194,7 @@ const MobileComingSoon = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-16 flex space-x-2 items-center justify-center mb-12">
+            <div className="mt-12 flex space-x-2 items-center justify-center mb-12">
               <FaCopyright className="text-white regular text-[24px]" />
               <p className="text-white bold text-[14px]">
                 2022 Sportrex Inc. All right reserved

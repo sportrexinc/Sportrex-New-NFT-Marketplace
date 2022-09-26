@@ -4,7 +4,7 @@ import sound from "../../assets/coming-soon/background-sound.mpeg";
 import { FaCopyright } from "react-icons/fa";
 import ResponseModal from "./Modal";
 import MobileComingSoon from "./Mobile";
-import { useCountdown } from "./useCountdown";
+// import { useCountdown } from "./useCountdown";
 import NormalLayout from "../../layouts/NormalLayout";
 import { AiOutlineAudio, AiOutlineAudioMuted } from "react-icons/ai";
 import logo from "../../assets/sportrex-logo.png";
@@ -14,10 +14,8 @@ import twitter from "../../assets/icons/twitter.png";
 import instagram from "../../assets/icons/instagram.png";
 import discord from "../../assets/icons/discord.png";
 import twitch from "../../assets/icons/twitch.png";
-import facebook from "../../assets/icons/facebook.png";
 import youtube from "../../assets/icons/youtube.png";
 import medium from "../../assets/icons/medium.png";
-import reddit from "../../assets/icons/reddit.png";
 import tiktok from "../../assets/icons/tiktok.png";
 
 // import telegram from "./images/telegram.svg";
@@ -105,7 +103,7 @@ export default ComingSoon;
 
 const Desktop = () => { 
    const audioRef = useRef();
-  const [days, hours, minutes, seconds] = useCountdown("2022-10-10");
+  // const [days, hours, minutes, seconds] = useCountdown("2022-10-10");
   const [open, setOpen] = useState();
   const [play, setPlay] = useState(false);
   useEffect(() => {
