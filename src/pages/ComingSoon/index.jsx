@@ -166,11 +166,11 @@ const Desktop = () => {
                     </div>
                   </div>
 
-                  <h1 className="text-white text-start text-[48px] leading-[50px] mt-20 bold w-5/12 line-1 anim-typewriter">
+                  <h1 className="text-white  text-[48px] leading-[50px] mt-20 bold w-5/12 line-1 anim-typewriter">
                     Anticipate{" "}
                     <span className="coming-soon-text ml-2">Sportrex</span>
                   </h1>
-                  <h1 className="coming-soon-text ml-2 line-1 anim-typewriter1 bold text-[48px]">
+                  <h1 className="coming-soon-text ml-2 line-2 anim-typewriter1 bold text-[48px]">
                     NFT Marketplace
                   </h1>
                   <div className="flex flex-col">
@@ -200,37 +200,38 @@ const Desktop = () => {
                     <p className=" mt-2 text-sm text-[#999] regular text-center 2xl:w-5/12  w-6/12">
                       **Notify me when website launch**
                     </p>
-
-                    <div className="flex flex-col items-center mt-[72px]">
-                      <h1 className="text-[#999] text-[20px] text-center bold">
-                        Join the Sportrex community
-                      </h1>
-                      <div className="flex space-x-2 mt-4">
-                        {linksArrayA.map((item, index) => {
-                          return (
-                            <a
-                              href={item.link}
-                              target="_blank"
-                              key={index}
-                              rel="noopener noreferrer"
-                            >
-                              <abbr title={`${item.name}`}>
-                                <img
-                                  src={item.icon}
-                                  alt="icons"
-                                  className="w-10 h-auto"
-                                />
-                              </abbr>
-                            </a>
-                          );
-                        })}
+                    <div className="flex justify-between flex-row-reverse items-end mt-[72px]">
+                      <div className="flex flex-col items-end ">
+                        <h1 className="text-[#999] text-[20px] text-start bold">
+                          Join the Sportrex community
+                        </h1>
+                        <div className="flex space-x-2 justify-end mt-4">
+                          {linksArrayA.map((item, index) => {
+                            return (
+                              <a
+                                href={item.link}
+                                target="_blank"
+                                key={index}
+                                rel="noopener noreferrer"
+                              >
+                                <abbr title={`${item.name}`}>
+                                  <img
+                                    src={item.icon}
+                                    alt="icons"
+                                    className="w-10 h-auto"
+                                  />
+                                </abbr>
+                              </a>
+                            );
+                          })}
+                        </div>
                       </div>
-                    </div>
-                    <div className="mt-16 flex space-x-2 items-center justify-center">
-                      <FaCopyright className="text-[#999] regular text-[14px]" />
-                      <p className="text-[#999] regular text-[14px]">
-                        2022 Sportrex Inc. All right reserved
-                      </p>
+                      <div className="mt-16 flex space-x-2 items-center justify-start">
+                        <FaCopyright className="text-[#999] regular text-[14px]" />
+                        <p className="text-[#999] regular text-[14px]">
+                          2022 Sportrex Inc. All right reserved
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
