@@ -196,4 +196,56 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF); */
     height: 20px;
     transform: translate(-4px, 5px);
   }
+  
+.line-1 {
+  position: relative;
+  /* top: 50%;   */
+  width: 100%;
+  /* margin: 0 auto; */
+  /* border-right: 2px solid rgba(255, 255, 255, 0.75); */
+  /* font-size: 180%; */
+  /* text-align: center; */
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(10%);
+}
+.line-2 {
+  position: relative;
+  /* top: 50%;   */
+  width: 41%;
+  /* margin: 0 auto; */
+  /* border-right: 2px solid rgba(255, 255, 255, 0.75); */
+  /* font-size: 180%; */
+  /* text-align: center; */
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(0%);
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 1s infinite normal,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+.anim-typewriter1 {
+  animation: typewriter1 4s steps(44) 1s infinite both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typewriter1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 }
