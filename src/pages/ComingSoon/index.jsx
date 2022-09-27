@@ -166,7 +166,7 @@ const Desktop = () => {
                     </div>
                   </div>
 
-                  <h1 className="text-white  text-[48px] leading-[50px] mt-20 bold w-5/12 line-1 anim-typewriter">
+                  <h1 className="text-white  text-[48px] leading-[50px] mt-20 bold  line-1 anim-typewriter">
                     Anticipate{" "}
                     <span className="coming-soon-text ml-2">Sportrex</span>
                   </h1>
