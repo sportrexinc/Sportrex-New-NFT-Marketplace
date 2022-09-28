@@ -1,7 +1,7 @@
 import React from 'react'
 
 const styles = {
-  parentContainer: "w-full h-full px-4 md:px-16   ",
+  parentContainer: "w-full h-full  px-4 md:px-16   ",
   container:
     "2xl:container 2xl:mx-auto ",
  

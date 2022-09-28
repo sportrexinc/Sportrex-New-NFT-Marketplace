@@ -15,7 +15,7 @@ import youtube from "../../assets/icons/youtube.png";
 import medium from "../../assets/icons/medium.png";
 import reddit from "../../assets/icons/reddit.png";
 import tiktok from "../../assets/icons/tiktok.png";
-
+import useImg from "../../assets/coming-soon/coming-modal.png"
 
 // import telegram from "./images/telegram.svg";
 // import twitter from "./images/twitter.svg";
@@ -83,12 +83,12 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   background: "#0E1648",
-  width: 400,
+  width: "100%",
   borderRadius: "15px",
   ["@media (min-width:780px)"]: {
     // eslint-disable-line no-useless-computed-key
 
-    width: 600,
+    width: 420,
   },
   bgcolor: "#020733",
   border: "none",
@@ -109,26 +109,27 @@ export default function ResponseModal({ open, handleClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <div className="w-full flex flex-col rounded-[16px] p-8 z-20 bg-[#020733] ">
+          <div className="w-full flex flex-col rounded-[16px]  z-20 bg-[#020733] ">
             <div className=" flex justify-end items-center">
-              <div className="w-full flex justify-end lg:w-8/12 items-center ">
+              <div className="w-full flex  lg:w-full items-center relative">
                 <FaTimesCircle
                   onClick={handleClose}
-                  className="text-white text-2xl cursor-pointer"
+                  className="text-white text-2xl md:text-3xl cursor-pointer absolute top-4 right-4 "
                 />
+                <img src={useImg} className="w-full h-auto" />
               </div>
             </div>
             {/* <div className="w-full">
               <iframe src="https://giphy.com/embed/26FL4fdR9oRs2tdEA"   className="w-full aspect-ratio "    />
             </div> */}
-            <div className="mt-6 md:mt-10 flex space-x-8 justify-center items-center">
-              <h1 className="w-10/12 md:w-8/12 text-[24px]  md:text-[36px] mx-auto text-center text-[#09ce35] bold">
-                Email Recieved Successfully
+            <div className="mt-6 md:mt-10 flex  justify-center items-center">
+              <h1 className="w-full  text-[16px]  md:text-[18px] mx-auto text-center  bold">
+                <span className="coming-soon-text">Congratulations </span> 🎉
               </h1>
             </div>
 
-            <div className="flex flex-col items-center mt-8 md:mt-12">
-              <h1 className="text-white  text-[20px] md:text-[28px] text-center bold">
+            <div className="flex flex-col items-center mt-4 pb-8">
+              <h1 className="text-white  text-[14px] md:text-[16px] text-center bold">
                 Join the Sportrex community
               </h1>
               <div className="flex space-x-2 mt-4">
@@ -144,7 +145,7 @@ export default function ResponseModal({ open, handleClose }) {
                         <img
                           src={item.icon}
                           alt="icons"
-                          className="w-8 md:w-12 h-auto"
+                          className="w-8 md:w-8 h-auto"
                         />
                       </abbr>
                     </a>

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./ComingSoon.css";
+import axios from "axios";
 import sound from "../../assets/coming-soon/background-sound.mpeg";
 import { FaCopyright } from "react-icons/fa";
 import ResponseModal from "./Modal";
@@ -8,7 +9,7 @@ import MobileComingSoon from "./Mobile";
 import NormalLayout from "../../layouts/NormalLayout";
 import { AiOutlineAudio, AiOutlineAudioMuted } from "react-icons/ai";
 import logo from "../../assets/sportrex-logo.png";
-import ComingImg from "../../assets/coming-soon/coming-soon-ocu.svg";
+
 import telegram from "../../assets/icons/telegram.png";
 import twitter from "../../assets/icons/twitter.png";
 import instagram from "../../assets/icons/instagram.png";
@@ -18,14 +19,6 @@ import youtube from "../../assets/icons/youtube.png";
 import medium from "../../assets/icons/medium.png";
 import tiktok from "../../assets/icons/tiktok.png";
 
-// import telegram from "./images/telegram.svg";
-// import twitter from "./images/twitter.svg";
-// import instagram from "./images/instagram.svg";
-// import discord from "./images/discord.svg";
-// import twitch from "./images/twitch.svg";
-// import youtube from "./images/youtube.svg";
-// import medium from "./images/medium.svg";
-// import tiktok from "./images/tiktok.svg";
 const linksArrayA = [
   {
     id: "1",
@@ -80,37 +73,46 @@ const ComingSoon = () => {
   const [isDesktop, setIsDesktop] = useState(true);
   useEffect(() => {
     if (window.innerWidth > 768) {
-      setIsDesktop(true)
-    }
-    else {
+      setIsDesktop(true);
+    } else {
       setIsDesktop(false);
     }
-  
- 
-  }, [isDesktop])
-  
-  return (
-    <>
-      {
-        isDesktop ? <Desktop /> : <MobileComingSoon />
-      }
-    
-    </>
-  );
+  }, [isDesktop]);
+
+  return <>{isDesktop ? <Desktop /> : <MobileComingSoon />}</>;
 };
 
 export default ComingSoon;
 
-const Desktop = () => { 
-   const audioRef = useRef();
+const Desktop = () => {
+  const audioRef = useRef();
   // const [days, hours, minutes, seconds] = useCountdown("2022-10-10");
   const [open, setOpen] = useState();
   const [play, setPlay] = useState(false);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setPlay(true);
-  //   }, 4000);
-  // }, []);
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    setLoading(true);
+    
+    axios
+      .post("https://sportrex-be.herokuapp.com/api/comingsoon", {email})
+      .then(function (response) {
+        
+
+        setOpen(true);
+        setLoading(false);
+        setEmail("");
+      })
+      .catch(function (error) {
+        setEmail("");
+        setLoading(false);
+      });
+  };
 
   useEffect(() => {
     if (play) {
@@ -118,7 +120,6 @@ const Desktop = () => {
     } else {
       audioRef.current.pause();
     }
-    
   }, [play]);
 
   const handleClose = () => {
@@ -165,72 +166,81 @@ const Desktop = () => {
                       </span>
                     </div>
                   </div>
-
-                  <h1 className="text-white  text-[48px] leading-[50px] mt-20 bold  line-1 anim-typewriter">
-                    Anticipate{" "}
-                    <span className="coming-soon-text ml-2">Sportrex</span>
-                  </h1>
-                  <h1 className="coming-soon-text ml-2 line-2 anim-typewriter1 bold text-[48px]">
-                    NFT Marketplace
-                  </h1>
-                  <div className="flex flex-col">
-                    <p className="text-[#f1f1f1] mt-4 w-6/12 2xl:w-5/12  text-start text-[20px] regular leading-8 pl-4 ">
-                      Home to virtual assets, digital arts and collectibles.
-                      Through our platform, users will be able to access the
-                      most amazing NFT deals for all categories users with VR/AR
-                      experience.
-                      <span className="logo-svg"></span>
-                    </p>
-                  </div>
-
-                  <div className="mt-10 w-full mb-4">
-                    <div className="2xl:w-5/12  w-6/12  flex items-center bg-[#152139] h-16 rounded-[20px] ">
-                      <input
-                        type="text"
-                        className="w-6/12 mx-auto pl-6 py-1 bg-transparent placeholder:text-[#999] placeholder:opacity-60 outline-none border-none regular text-white placeholder:text-[14px]"
-                        placeholder=" Enter your email or ENS address "
-                      />
-                      <p
-                        className="coming-soon-btn w-4/12 h-full rounded-[20px] cursor-wait text-white bold text-[18px] text-center flex justify-center items-center"
-                        onClick={() => setOpen(true)}
-                      >
-                        Get Notified
+                  <div className="w-full flex supo  flex-col 2xl:justify-center ">
+                    <h1 className="text-white  text-[48px] leading-[50px] mt-20 bold  line-1 anim-typewriter">
+                      Anticipate{" "}
+                      <span className="coming-soon-text ml-2">Sportrex</span>
+                    </h1>
+                    <h1 className="coming-soon-text ml-2 line-2 anim-typewriter1 bold text-[48px]">
+                      NFT Marketplace
+                    </h1>
+                    <div className="flex flex-col">
+                      <p className="text-[#f1f1f1] mt-4 w-6/12 2xl:w-5/12  text-start text-[20px] regular leading-8 pl-4 ">
+                        Home to virtual assets, digital arts and collectibles.
+                        Through our platform, users will be able to access the
+                        most amazing NFT deals for all categories users with
+                        VR/AR experience.
+                        <span className="logo-svg"></span>
                       </p>
                     </div>
-                    <p className=" mt-2 text-sm text-[#999] regular text-center 2xl:w-5/12  w-6/12">
-                      **Notify me when website launch**
-                    </p>
-                    <div className="flex justify-between flex-row-reverse items-end mt-[72px]">
-                      <div className="flex flex-col items-end ">
-                        <h1 className="text-[#999] text-[20px] text-start bold">
-                          Join the Sportrex community
-                        </h1>
-                        <div className="flex space-x-2 justify-end mt-4">
-                          {linksArrayA.map((item, index) => {
-                            return (
-                              <a
-                                href={item.link}
-                                target="_blank"
-                                key={index}
-                                rel="noopener noreferrer"
-                              >
-                                <abbr title={`${item.name}`}>
-                                  <img
-                                    src={item.icon}
-                                    alt="icons"
-                                    className="w-10 h-auto"
-                                  />
-                                </abbr>
-                              </a>
-                            );
-                          })}
-                        </div>
+
+                    <div className="mt-10 w-full mb-4">
+                      <div className="2xl:w-5/12  w-6/12  flex items-center bg-[#152139] h-16 rounded-[20px] ">
+                        <input
+                          type="text"
+                          className="w-6/12 mx-auto pl-6 py-1 bg-transparent placeholder:text-[#999] placeholder:opacity-60 outline-none border-none regular text-white placeholder:text-[14px]"
+                          placeholder=" Enter your email or ENS address "
+                          onChange={handleChange}
+                          value={email}
+                        />
+                        {loading ? (
+                          <p className="coming-soon-btn w-4/12 h-full rounded-[20px] cursor-wait text-white bold text-[18px] text-center flex justify-center items-center">
+                            Please wait ...
+                          </p>
+                        ) : (
+                          <p
+                            className="coming-soon-btn w-4/12 h-full rounded-[20px] cursor-wait text-white bold text-[18px] text-center flex justify-center items-center"
+                            onClick={handleSubmit}
+                          >
+                            Get Notified
+                          </p>
+                        )}
                       </div>
-                      <div className="mt-16 flex space-x-2 items-center justify-start">
-                        <FaCopyright className="text-[#999] regular text-[14px]" />
-                        <p className="text-[#999] regular text-[14px]">
-                          2022 Sportrex Inc. All right reserved
-                        </p>
+                      <p className=" mt-2 text-sm text-[#999] regular text-center 2xl:w-5/12  w-6/12">
+                        **Notify me when website launch**
+                      </p>
+                      <div className="flex justify-between flex-row-reverse items-end mt-[72px] bottom-down 2xl:container 2xl:mx-auto max-w-[1440px] mx-auto">
+                        <div className="flex flex-col items-end ">
+                          <h1 className="text-white text-[20px] text-start bold">
+                            Join the Sportrex community
+                          </h1>
+                          <div className="flex space-x-2 justify-end mt-4">
+                            {linksArrayA.map((item, index) => {
+                              return (
+                                <a
+                                  href={item.link}
+                                  target="_blank"
+                                  key={index}
+                                  rel="noopener noreferrer"
+                                >
+                                  <abbr title={`${item.name}`}>
+                                    <img
+                                      src={item.icon}
+                                      alt="icons"
+                                      className="w-10 h-auto"
+                                    />
+                                  </abbr>
+                                </a>
+                              );
+                            })}
+                          </div>
+                        </div>
+                        <div className="mt-16 flex space-x-2 items-center justify-start">
+                          <FaCopyright className="text-[#999] regular text-[14px]" />
+                          <p className="text-[#999] regular text-[14px]">
+                            2022 Sportrex Inc. All right reserved
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -242,4 +252,4 @@ const Desktop = () => {
       </div>
     </>
   );
-}
+};

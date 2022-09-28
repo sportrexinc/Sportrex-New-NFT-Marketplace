@@ -1,13 +1,13 @@
-import React,{useState,useEffect,useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ComingSoon.css";
 import sound from "../../assets/coming-soon/background-sound.mpeg";
 import { AiOutlineAudio, AiOutlineAudioMuted } from "react-icons/ai";
 
 import ResponseModal from "./Modal";
 import { FaCopyright } from "react-icons/fa";
-
+import axios from "axios";
 import logo from "../../assets/sportrex-logo.png";
-import ComingImg from "../../assets/coming-soon/coming-soon-ocu.svg";
+
 import telegram from "../../assets/icons/telegram.png";
 import twitter from "../../assets/icons/twitter.png";
 import instagram from "../../assets/icons/instagram.png";
@@ -71,13 +71,7 @@ const MobileComingSoon = () => {
   const audioRef = useRef();
   const [play, setPlay] = useState(false);
 
-  
-   const [open, setOpen] = useState();
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setPlay(true);
-  //   }, 5000);
-  // }, []);
+  const [open, setOpen] = useState();
 
   useEffect(() => {
     if (play) {
@@ -86,10 +80,32 @@ const MobileComingSoon = () => {
       audioRef.current.pause();
     }
   }, [play]);
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-   const handleClose = () => {
-     setOpen(false);
-   };
+    setLoading(true);
+
+    axios
+      .post("https://sportrex-be.herokuapp.com/api/comingsoon", { email })
+      .then(function (response) {
+        setOpen(true);
+        setLoading(false);
+        setEmail("");
+      })
+      .catch(function (error) {
+        setEmail("");
+        setLoading(false);
+      });
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <div className=" md:hidden w-full min-h-screen coming-soon-mobile relative overflow-x-hidden  flex justify-center items-center">
       <ResponseModal open={open} handleClose={handleClose} />
@@ -132,9 +148,7 @@ const MobileComingSoon = () => {
 
             <h1 className="text-white text-center text-[32px] mt-10 bold px-4 leading-[40px] line-1 anim-typewriter">
               Anticipate
-              <span className="coming-soon-text ml-2">
-                Sportrex 
-              </span>
+              <span className="coming-soon-text ml-2">Sportrex</span>
             </h1>
             <h1 className="coming-soon-text ml-2 line-2 anim-typewriter1 bold text-[32px]">
               NFT Marketplace
@@ -152,16 +166,28 @@ const MobileComingSoon = () => {
               <div className="2xl:w-5/12 w-11/12 mx-auto flex items-center bg-[#152139] h-16 rounded-[20px] ">
                 <input
                   type="text"
-                  className="w-full pl-2 pr-2 py-1 bg-transparent placeholder:text-center placeholder:text-[#999] placeholder:opacity-60 outline-none border-none regular text-white placeholder:text-md"
+                  className="w-full pl-4 pr-2 py-1 bg-transparent placeholder:text-center placeholder:text-[#999] placeholder:opacity-60 outline-none border-none regular text-white placeholder:text-md"
                   placeholder=" Enter your email or ENS address"
+                  value={email}
+                  onChange={handleChange}
                 />
               </div>
-              <p
-                className="coming-soon-btn w-11/12 h-16 mx-auto  rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-1 "
-                onClick={() => setOpen(true)}
-              >
-                Get Notified
-              </p>
+              {loading ? (
+                <p
+                  className="coming-soon-btn w-11/12 h-16 mx-auto  rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-1 "
+                  
+                >
+                  Please wait...
+                </p>
+              ) : (
+                <p
+                  className="coming-soon-btn w-11/12 h-16 mx-auto  rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center mt-1 "
+                  onClick={handleSubmit}
+                >
+                  Get Notified
+                </p>
+              )}
+
               <p className="text-center mb-3  text-white regular text-sm">
                 **Notify me when website launch**
               </p>
