@@ -192,14 +192,14 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF); */
   height: 80vh;
 }
 }
-@media screen and (min-height: 920px) {
-.bottom-down{
+@media screen and (min-height: 800px) {
+.bottom-down-height{
   position: absolute;
   bottom: 24px;
   left: 0;
   right: 0;
 }
-.supo{
+.supo-height{
   height: 80vh;
 }
 }

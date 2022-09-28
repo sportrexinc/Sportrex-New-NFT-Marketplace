@@ -148,7 +148,7 @@ const MobileComingSoon = () => {
 
             <h1 className="text-white text-center text-[32px] mt-10 bold px-4 leading-[40px] line-1 anim-typewriter">
               Anticipate
-              <span className="coming-soon-text ml-2">Sportrex</span>
+              <span className="coming-soon-text ">Sportrex</span>
             </h1>
             <h1 className="coming-soon-text ml-2 line-2 anim-typewriter1 bold text-[32px]">
               NFT Marketplace

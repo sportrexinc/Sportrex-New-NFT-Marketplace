@@ -71,11 +71,7 @@ const linksArrayA = [
 ];
 const ComingSoon = () => {
   const [isDesktop, setIsDesktop] = useState(true);
-  useEffect(() => {
-    alert(window.innerHeight)
-  
-    
-  }, [])
+
   
   useEffect(() => {
     if (window.innerWidth > 768) {
@@ -172,12 +168,12 @@ const Desktop = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="w-full flex supo  flex-col 2xl:justify-center ">
-                    <h1 className="text-white  text-[48px] leading-[50px] mt-20 bold  line-1 anim-typewriter">
+                  <div className="w-full flex supo supo-height flex-col 2xl:justify-center ">
+                    <h1 className="text-white  text-[48px] leading-[50px] mt-20 bold  line-1 anim-typewriter ml-4">
                       Anticipate{" "}
                       <span className="coming-soon-text ml-2">Sportrex</span>
                     </h1>
-                    <h1 className="coming-soon-text ml-2 line-2 anim-typewriter1 bold text-[48px]">
+                    <h1 className="coming-soon-text ml-4 line-2 anim-typewriter1 bold text-[48px]">
                       NFT Marketplace
                     </h1>
                     <div className="flex flex-col">
@@ -215,7 +211,7 @@ const Desktop = () => {
                       <p className=" mt-2 text-sm text-[#999] regular text-center 2xl:w-5/12  w-6/12">
                         **Notify me when website launch**
                       </p>
-                      <div className="flex justify-between flex-row-reverse items-end mt-[72px] bottom-down 2xl:container 2xl:mx-auto max-w-[1440px] mx-auto">
+                      <div className="flex justify-between flex-row-reverse items-end mt-[72px] bottom-down bottom-down-height 2xl:container 2xl:mx-auto max-w-[1440px] mx-auto">
                         <div className="flex flex-col items-end ">
                           <h1 className="text-white text-[20px] text-start bold">
                             Join the Sportrex community
