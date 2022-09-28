@@ -11,6 +11,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF); */
 .logo-svg {
   display: inline-block;
   width: 32px;
+  margin-left: 8px;
   background-image: url("../../assets/coming-soon/coming-soon-ocu.svg");
   background-repeat: no-repeat;
   background-size: 90%;
