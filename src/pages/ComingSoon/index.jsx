@@ -211,7 +211,7 @@ const Desktop = () => {
                       <p className=" mt-2 text-sm text-[#999] regular text-center 2xl:w-5/12  w-6/12">
                         **Notify me when website launch**
                       </p>
-                      <div className="flex justify-between flex-row-reverse items-end mt-[72px] bottom-down bottom-down-height 2xl:container 2xl:mx-auto max-w-[1440px] mx-auto">
+                      <div className=" w-full flex justify-between flex-row-reverse items-end mt-[72px] bottom-down bottom-down-height 2xl:container 2xl:mx-auto max-w-[1440px] mx-auto">
                         <div className="flex flex-col items-end ">
                           <h1 className="text-white text-[20px] text-start bold">
                             Join the Sportrex community
@@ -239,7 +239,7 @@ const Desktop = () => {
                         </div>
                         <div className="mt-16 flex space-x-2 items-center justify-start">
                           <FaCopyright className="text-[#999] regular text-[14px]" />
-                          <p className="text-[#999] regular text-[14px]">
+                          <p className="text-[#fff] regular text-[14px]">
                             2022 Sportrex Inc. All right reserved
                           </p>
                         </div>
