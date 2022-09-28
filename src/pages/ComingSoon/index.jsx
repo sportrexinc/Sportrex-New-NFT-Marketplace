@@ -72,6 +72,12 @@ const linksArrayA = [
 const ComingSoon = () => {
   const [isDesktop, setIsDesktop] = useState(true);
   useEffect(() => {
+    alert(window.innerHeight)
+  
+    
+  }, [])
+  
+  useEffect(() => {
     if (window.innerWidth > 768) {
       setIsDesktop(true);
     } else {

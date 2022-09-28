@@ -192,6 +192,17 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF); */
   height: 80vh;
 }
 }
+@media screen and (min-height: 920px) {
+.bottom-down{
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+}
+.supo{
+  height: 80vh;
+}
+}
 @media screen and (max-width: 767px) {
   .boxoA {
     width: 86px;
