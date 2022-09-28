@@ -208,7 +208,7 @@ const Desktop = () => {
                           </p>
                         )}
                       </div>
-                      <p className=" mt-2 text-sm text-[#999] regular text-center 2xl:w-5/12  w-6/12">
+                      <p className=" mt-2 text-md text-[#999] regular text-center 2xl:w-5/12  w-6/12">
                         **Notify me when website launch**
                       </p>
                       <div className="  flex justify-between flex-row-reverse items-end mt-[72px] bottom-down bottom-down-height 2xl:container 2xl:mx-auto max-w-[1440px] mx-auto">
