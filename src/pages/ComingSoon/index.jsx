@@ -199,7 +199,7 @@ const Desktop = () => {
                           </p>
                         ) : (
                           <p
-                            className="coming-soon-btn w-4/12 h-full rounded-[20px] cursor-wait text-white bold text-[18px] text-center flex justify-center items-center"
+                            className="coming-soon-btn w-4/12 h-full rounded-[20px] cursor-pointer text-white bold text-[18px] text-center flex justify-center items-center"
                             onClick={handleSubmit}
                           >
                             Get Notified
