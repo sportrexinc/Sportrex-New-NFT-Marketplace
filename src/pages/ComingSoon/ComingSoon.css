@@ -197,10 +197,11 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF); */
 @media screen and (min-height: 800px) {
 .bottom-down-height{
   position: absolute;
-  bottom: 24px;
+  bottom: 0px;
   /* left: 0;
   right: 0; */
-  max-width: 1440px;
+  /* max-width: 1440px; */
+  width: 100%;
   margin: 0 auto;
 }
 .supo-height{

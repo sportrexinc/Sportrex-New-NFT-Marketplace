@@ -133,9 +133,9 @@ const Desktop = () => {
         <ResponseModal open={open} handleClose={handleClose} />
         <div className="coming-soon-bg ">
           <div className="coming-overlay ">
-            <div className="2xl:container 2xl:mx-auto max-w-[1440px] mx-auto flow-hide h-screen ">
+            <div className="2xl:container 2xl:mx-auto max-w-[1440px] mx-auto flow-hide h-screen relative">
               <NormalLayout>
-                <div className="w-full flex flex-col  justify-center mt-10">
+                <div className="w-full flex flex-col  justify-center mt-10 relative">
                   <div className="flex justify-between w-full items-center">
                     <div className="w-[181px] h-auto ">
                       <img src={logo} alt="logo" className="w-full h-auto" />
@@ -211,7 +211,7 @@ const Desktop = () => {
                       <p className=" mt-2 text-sm text-[#999] regular text-center 2xl:w-5/12  w-6/12">
                         **Notify me when website launch**
                       </p>
-                      <div className=" w-full flex justify-between flex-row-reverse items-end mt-[72px] bottom-down bottom-down-height 2xl:container 2xl:mx-auto max-w-[1440px] mx-auto">
+                      <div className="  flex justify-between flex-row-reverse items-end mt-[72px] bottom-down bottom-down-height 2xl:container 2xl:mx-auto max-w-[1440px] mx-auto">
                         <div className="flex flex-col items-end ">
                           <h1 className="text-white text-[20px] text-start bold">
                             Join the Sportrex community
