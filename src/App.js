@@ -25,7 +25,7 @@ import ComingSoon from './pages/ComingSoon';
 function App() {
   return (
     <Switch>
-      <Route exact path="/" component={Intro} />
+      {/* <Route exact path="/" component={Intro} /> */}
       <Route exact path="/home" component={Home} />
       <Route path="/market" component={Market} />
       <Route path="/faq" component={FAQ} />
@@ -45,7 +45,7 @@ function App() {
       <Route path="/mint-single-nft" component={SingleMintNft} />
       <Route path="/mint-collection-nft" component={CollectionMintNft}  />
       <Route path="/mint-bundle-nft" component={BundleMintNft}  />
-      <Route path="/come" component={ComingSoon}  />
+      <Route path="/" component={ComingSoon}  />
     </Switch>
   );
 }

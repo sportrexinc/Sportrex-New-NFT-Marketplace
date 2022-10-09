@@ -71,17 +71,22 @@ const linksArrayA = [
 ];
 const ComingSoon = () => {
   const [isDesktop, setIsDesktop] = useState(true);
-
   
   useEffect(() => {
-    if (window.innerWidth > 768) {
-      setIsDesktop(true);
-    } else {
-      setIsDesktop(false);
-    }
-  }, [isDesktop]);
+    const handleResize = (evt) => {
+      if (evt.target.innerWidth > 768) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
-  return <>{isDesktop ? <Desktop /> : <MobileComingSoon />}</>;
+  return isDesktop ? <Desktop /> : <MobileComingSoon />;
 };
 
 export default ComingSoon;
@@ -104,8 +109,6 @@ const Desktop = () => {
     axios
       .post("https://sportrex-be.herokuapp.com/api/comingsoon", {email})
       .then(function (response) {
-        
-
         setOpen(true);
         setLoading(false);
         setEmail("");
@@ -123,10 +126,21 @@ const Desktop = () => {
       audioRef.current.pause();
     }
   }, [play]);
+  
+  useEffect(() => {
+    setTimeout(() => {
+      setPlay(true)
+    }, 5000);
+    // return () => {
+    //   second
+    // }
+  }, [])
+  
 
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
     <>
       <div className="w-full min-h-screen bg-blue-commingSoon relative overflow-x-hidden  md:flex justify-center items-center hidden ">
