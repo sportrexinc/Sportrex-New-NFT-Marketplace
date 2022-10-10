@@ -71,7 +71,15 @@ const linksArrayA = [
 ];
 const ComingSoon = () => {
   const [isDesktop, setIsDesktop] = useState(true);
-  
+
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      setIsDesktop(true);
+    } else {
+      setIsDesktop(false);
+    }
+  }, []);
+
   useEffect(() => {
     const handleResize = (evt) => {
       if (evt.target.innerWidth > 768) {
@@ -103,11 +111,11 @@ const Desktop = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     setLoading(true);
-    
+
     axios
-      .post("https://sportrex-be.herokuapp.com/api/comingsoon", {email})
+      .post("https://sportrex-be.herokuapp.com/api/comingsoon", { email })
       .then(function (response) {
         setOpen(true);
         setLoading(false);
@@ -126,16 +134,15 @@ const Desktop = () => {
       audioRef.current.pause();
     }
   }, [play]);
-  
+
   useEffect(() => {
     setTimeout(() => {
-      setPlay(true)
+      setPlay(true);
     }, 5000);
     // return () => {
     //   second
     // }
-  }, [])
-  
+  }, []);
 
   const handleClose = () => {
     setOpen(false);
